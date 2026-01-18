@@ -1,46 +1,11 @@
-<<<<<<< HEAD
 import { PRICING_PLANS } from '../utils/constants';
-=======
-const PLANS = [
-  {
-    name: "Desarrollo MVP",
-    price: "MVP",
-    period: "/sprint",
-    desc: "Para startups que necesitan lanzar rápido y validar.",
-    features: ["Prototipado rápido en React", "Arquitectura escalable desde el día 1", "Entrega continua (CI/CD)"],
-    cta: "Discutir MVP",
-    highlighted: false,
-  },
-  {
-    name: "Full Stack Partner",
-    price: "Senior",
-    period: "/dev",
-    desc: "Colaboración a largo plazo para productos maduros.",
-    features: ["Desarrollo de features complejas", "Refactorización y Deuda Técnica", "Optimización de rendimiento", "Integración de APIs y Backend"],
-    cta: "Ver disponibilidad",
-    highlighted: true,
-  },
-  {
-    name: "Consultoría",
-    price: "Audit",
-    period: "/hora",
-    desc: "Asesoría técnica para equipos y empresas.",
-    features: ["Revisión de arquitectura", "Mejores prácticas de React", "Mentoria de equipo", "Estrategia de adopción tecnológica"],
-    cta: "Agendar sesión",
-    highlighted: false,
-  },
-];
->>>>>>> 161da99ec3f81cd7a9b78a59e208ee58c7eceed8
+import Section from '../components/ui/Section';
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-5 bg-darker">
+    <Section id="pricing" className="bg-darker">
       <div className="container py-5">
-<<<<<<< HEAD
         <div className="text-center mb-5 fade-in-up">
-=======
-        <div className="text-center mb-5">
->>>>>>> 161da99ec3f81cd7a9b78a59e208ee58c7eceed8
           <h2 className="fw-bold display-6">¿Cómo podemos colaborar?</h2>
           <p className="text-secondary lead">
             Adaptabilidad total a las necesidades de tu proyecto o equipo.
@@ -48,7 +13,6 @@ export default function Pricing() {
         </div>
 
         <div className="row g-4 align-items-center justify-content-center">
-<<<<<<< HEAD
           {PRICING_PLANS.map((p, i) => (
             <div
               key={p.name}
@@ -58,13 +22,6 @@ export default function Pricing() {
               <div
                 className={[
                   "h-100 rounded-4 p-4 border position-relative transition-all hover-card",
-=======
-          {PLANS.map((p) => (
-            <div key={p.name} className={`col-12 col-md-6 col-lg-4 ${p.highlighted ? 'scale-105' : ''}`}>
-              <div
-                className={[
-                  "h-100 rounded-4 p-4 border position-relative transition-all",
->>>>>>> 161da99ec3f81cd7a9b78a59e208ee58c7eceed8
                   p.highlighted
                     ? "border-primary bg-dark shadow-lg shadow-primary-subtle"
                     : "border-secondary bg-dark bg-opacity-25",
@@ -113,14 +70,10 @@ export default function Pricing() {
           ))}
         </div>
 
-<<<<<<< HEAD
         <p className="text-center text-secondary mt-5 mb-0 small opacity-75 fade-in-up delay-300">
-=======
-        <p className="text-center text-secondary mt-5 mb-0 small opacity-75">
->>>>>>> 161da99ec3f81cd7a9b78a59e208ee58c7eceed8
           * Disponible para contratos remotos internacionales.
         </p>
       </div>
-    </section>
+    </Section>
   );
 }

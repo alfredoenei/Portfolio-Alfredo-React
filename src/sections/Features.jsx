@@ -1,62 +1,15 @@
-<<<<<<< HEAD
 import { FEATURES } from '../utils/constants';
-=======
-const FEATURES = [
-  {
-    title: "Arquitectura Escalable",
-    text: "Diseño modular y desacoplado listo para crecer. Evita la deuda técnica desde el primer commit.",
-    icon: "bi-diagram-3-fill",
-    color: "text-warning"
-  },
-  {
-    title: "Responsive & Mobile First",
-    text: "Experiencia de usuario fluida en cualquier dispositivo, optimizada con grillas modernas y CSS robusto.",
-    icon: "bi-phone-fill",
-    color: "text-info"
-  },
-  {
-    title: "Sistemas de Diseño",
-    text: "Implementación de tokens y componentes atómicos para una consistencia visual impecable y fácil mantenimiento.",
-    icon: "bi-palette-fill",
-    color: "text-primary"
-  },
-  {
-    title: "Rendimiento y SEO",
-    text: "Mejores prácticas de Web Vitals, carga diferida y semántica HTML para máxima visibilidad y velocidad.",
-    icon: "bi-speedometer2",
-    color: "text-success"
-  },
-  {
-    title: "CI/CD & DevOps Ready",
-    text: "Flujos de trabajo automatizados para despliegues seguros y rápidos en plataformas modernas como Vercel.",
-    icon: "bi-rocket-fill",
-    color: "text-danger"
-  },
-  {
-    title: "Código Documentado",
-    text: "Transparencia total. Código limpio, tipado y comentado para facilitar la colaboración en equipo.",
-    icon: "bi-code-square",
-    color: "text-secondary"
-  },
-];
->>>>>>> 161da99ec3f81cd7a9b78a59e208ee58c7eceed8
+import Section from '../components/ui/Section';
+import GlowBackground from '../components/ui/GlowBackground';
 
 export default function Features() {
   return (
-    <section id="features" className="py-5 position-relative overflow-hidden">
+    <Section id="features">
       {/* Background Decor */}
-<<<<<<< HEAD
-      <div className="glow-bg bg-primary opacity-10 top-0 start-0 translate-middle"
-        style={{ width: 500, height: 500 }}></div>
+      <GlowBackground className="top-0 start-0" size={500} />
 
       <div className="container py-5">
         <div className="row align-items-end mb-5 g-3 fade-in-up">
-=======
-      <div className="position-absolute start-0 top-0 translate-middle rounded-circle bg-primary opacity-10 blur-3xl" style={{ width: 500, height: 500, filter: 'blur(100px)', zIndex: -1 }}></div>
-
-      <div className="container py-5">
-        <div className="row align-items-end mb-5 g-3">
->>>>>>> 161da99ec3f81cd7a9b78a59e208ee58c7eceed8
           <div className="col-lg-7">
             <h2 className="fw-bold display-6 mb-2">Ingeniería que genera <span className="text-primary">confianza</span></h2>
             <p className="text-secondary lead mb-0">
@@ -70,13 +23,8 @@ export default function Features() {
 
         <div className="row g-4">
           {FEATURES.map((f, i) => (
-<<<<<<< HEAD
             <div key={f.title} className="col-12 col-md-6 col-lg-4 fade-in-up" style={{ animationDelay: `${i * 100}ms` }}>
               <div className="h-100 p-4 rounded-4 border border-secondary bg-dark bg-opacity-50 hover-card group">
-=======
-            <div key={f.title} className="col-12 col-md-6 col-lg-4">
-              <div className="h-100 p-4 rounded-4 border border-secondary bg-dark bg-opacity-50 hover-lift transition-all group">
->>>>>>> 161da99ec3f81cd7a9b78a59e208ee58c7eceed8
                 <div className="d-flex align-items-center gap-3 mb-4">
                   <div
                     className="d-flex align-items-center justify-content-center rounded-3 bg-opacity-10 bg-white border border-secondary"
@@ -93,6 +41,6 @@ export default function Features() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

@@ -1,5 +1,7 @@
 import { useMemo, useState } from "react";
 import { CONTACT_REASONS } from "../utils/constants";
+import Section from "../components/ui/Section";
+import GlowBackground from "../components/ui/GlowBackground";
 
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
@@ -60,22 +62,13 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-5 position-relative overflow-hidden">
+    <Section id="contact">
       {/* Glow effect */}
-<<<<<<< HEAD
-      <div className="glow-bg bg-primary opacity-10 end-0 bottom-0 translate-middle"
-        style={{ width: 400, height: 400 }}></div>
+      <GlowBackground className="end-0 bottom-0" />
 
       <div className="container py-5">
         <div className="row g-5 align-items-stretch">
           <div className="col-lg-5 fade-in-up">
-=======
-      <div className="position-absolute end-0 bottom-0 translate-middle rounded-circle bg-primary opacity-10 blur-3xl" style={{ width: 400, height: 400, filter: 'blur(80px)', zIndex: -1 }}></div>
-
-      <div className="container py-5">
-        <div className="row g-5 align-items-stretch">
-          <div className="col-lg-5">
->>>>>>> 161da99ec3f81cd7a9b78a59e208ee58c7eceed8
             <h2 className="fw-bold display-6 mb-3">Contáctanos</h2>
             <p className="text-secondary lead mb-4">
               ¿Tienes algún proyecto en mente o simplemente quieres saludar? Completa el formulario a continuación.
@@ -84,26 +77,15 @@ export default function Contact() {
             <div className="mt-4 p-4 rounded-4 border border-secondary bg-dark bg-opacity-50">
               <div className="fw-semibold mb-3 text-white">¿Por qué contactarnos?</div>
               <ul className="text-secondary mb-0 ps-3 vstack gap-2">
-<<<<<<< HEAD
                 {CONTACT_REASONS.map((reason) => (
                   <li key={reason}>{reason}</li>
                 ))}
-=======
-                <li>Discutir oportunidades de colaboración</li>
-                <li>Consultoría sobre desarrollo React</li>
-                <li>Feedback sobre este portafolio</li>
->>>>>>> 161da99ec3f81cd7a9b78a59e208ee58c7eceed8
               </ul>
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="col-lg-7 fade-in-up delay-100">
             <div className="h-100 p-4 p-md-5 rounded-4 glass-panel shadow-lg">
-=======
-          <div className="col-lg-7">
-            <div className="h-100 p-4 p-md-5 rounded-4 border border-secondary bg-surface shadow-lg">
->>>>>>> 161da99ec3f81cd7a9b78a59e208ee58c7eceed8
               {status.sent && (
                 <div className="alert alert-success d-flex align-items-center gap-2" role="alert">
                   <i className="bi bi-check-circle-fill"></i>
@@ -176,6 +158,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { HERO_STEPS } from '../utils/constants';
+import GlowBackground from '../components/ui/GlowBackground';
 
 export default function Hero() {
   const [steps, setSteps] = useState(HERO_STEPS);
@@ -44,8 +45,8 @@ export default function Hero() {
           <div className="col-lg-6 fade-in-up delay-100">
             <div className="position-relative">
               {/* Decorative glow background */}
-              <div className="glow-bg bg-primary opacity-25 top-50 start-50 translate-middle"
-                style={{ width: '300px', height: '300px' }}></div>
+              {/* Decorative glow background */}
+              <GlowBackground className="top-50 start-50" opacity="opacity-25" size={300} />
 
               <div className="p-4 rounded-4 glass-panel shadow-2xl position-relative overflow-hidden">
                 <div className="d-flex align-items-center justify-content-between border-bottom border-secondary pb-3 mb-4">
