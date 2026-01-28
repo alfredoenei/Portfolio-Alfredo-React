@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 @import './variables.css';
 
-/* Global resets & Base */
+/* Reseteos Globales y Base */
 body {
   background-color: var(--bg-dark);
   color: var(--text-primary);
@@ -31,30 +31,33 @@ a {
   transition: all 0.2s ease;
 }
 
-/* --- Bootstrap Overrides --- */
 
-/* Buttons */
+/* Botones */
 .btn {
-  font-weight: 600;
-  padding: 0.625rem 1.25rem;
-  border-radius: var(--radius-sm);
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50rem;
+  /* Forma de Píldora Completa */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  font-size: 1rem;
 }
 
 .btn-primary {
   background-color: var(--primary);
   border-color: var(--primary);
-  color: #fff;
-  box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
+  color: var(--primary-text);
+  /* Texto oscuro sobre Verde Lima */
+  box-shadow: 0 4px 14px 0 rgba(195, 242, 52, 0.2);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-hover);
   border-color: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.23);
+  box-shadow: 0 6px 20px rgba(195, 242, 52, 0.3);
+  color: var(--primary-text);
 }
 
 .btn-primary:active {
@@ -79,7 +82,7 @@ a {
   border-radius: var(--radius-md);
 }
 
-/* --- Utilities & Custom Effects --- */
+/* --- Utilidades y Efectos Personalizados --- */
 
 /* Glassmorphism */
 .glass-panel {
@@ -132,7 +135,7 @@ a {
   width: 100%;
 }
 
-/* Glow Backgrounds */
+/* Fondos Resplandecientes (Glow) */
 .glow-bg {
   position: absolute;
   border-radius: 50%;
@@ -153,7 +156,7 @@ a {
   }
 }
 
-/* Animations */
+/* Animaciones */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -182,7 +185,59 @@ a {
   animation-delay: 300ms;
 }
 
-/* Hover Effects */
+/* Degradados de Texto */
+.text-gradient {
+  background: linear-gradient(135deg, #fff 30%, #bcccd1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Utilidades de Ayuda (Helpers) --- */
+
+/* Tipografía */
+.text-balance {
+  text-wrap: balance;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+/* Ajuste de Imágenes */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Sombras y Elevación */
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-primary-subtle {
+  box-shadow: 0 20px 40px -10px rgba(195, 242, 52, 0.15);
+}
+
+/* Gradientes */
+.bg-gradient-to-t {
+  background: linear-gradient(to top, var(--bg-card) 10%, transparent 100%);
+}
+
+/* Transformaciones y Transiciones */
+.transform-gpu {
+  transform: translate3d(0, 0, 0);
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-700 {
+  transition-duration: 700ms;
+}
+
+/* Efectos Hover Unificados */
 .hover-card {
   transition: all 0.3s ease;
 }
@@ -193,14 +248,20 @@ a {
   border-color: var(--primary);
 }
 
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(195, 242, 52, 0.4);
+}
+
 .hover-glow:hover {
   box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
 }
 
-/* Text Gradients */
-.text-gradient {
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.hover-scale-110:hover {
+  transform: scale(1.1);
+}
+
+.hover-bg-surface-light:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--text-primary);
 }

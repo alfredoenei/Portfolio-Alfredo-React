@@ -4,11 +4,9 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top navbar-dark py-3 glass-panel-heavy transition-all">
       <div className="container">
+        {/* Logo: Simple y tipográfico */}
         <a className="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
-          <div className="d-flex align-items-center justify-content-center text-primary" style={{ width: 32, height: 32 }}>
-            <i className="bi bi-hexagon-fill fs-3"></i>
-          </div>
-          <span className="tracking-tight fw-bold text-white">Alfredo Enei</span>
+          <span className="tracking-tight fw-bold text-white fs-4">Alfredo Enei</span>
         </a>
 
         <button
@@ -24,10 +22,10 @@ export default function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="nav">
-          <ul className="navbar-nav ms-auto gap-1 gap-lg-4 mb-3 mb-lg-0">
+          <ul className="navbar-nav mx-auto gap-1 gap-lg-4 mb-3 mb-lg-0">
             {NAV_LINKS.map((link) => (
               <li className="nav-item" key={link.label}>
-                <a className="nav-link small text-uppercase tracking-wider" href={link.href}>
+                <a className="nav-link small text-secondary fw-semibold px-2" href={link.href}>
                   {link.label}
                 </a>
               </li>
@@ -35,7 +33,7 @@ export default function Navbar() {
           </ul>
 
           <div className="d-flex ms-lg-4 gap-3">
-            <a className="btn btn-primary d-none d-lg-block rounded-pill px-4" href="#contact">Contactar</a>
+            <a className="btn btn-outline-light rounded-pill px-4 btn-sm py-2" href="#contact">Contactar</a>
           </div>
         </div>
       </div>
