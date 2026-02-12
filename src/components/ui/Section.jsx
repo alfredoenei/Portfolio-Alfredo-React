@@ -1,10 +1,10 @@
 import React from 'react';
 
 /**
- * Standard Section Wrapper
- * @param {string} id - Section ID for navigation
- * @param {string} className - Additional classes
- * @param {React.ReactNode} children - Section content
+ * Contenedor de Sección Estándar
+ * @param {string} id - ID de la sección para navegación
+ * @param {string} className - Clases adicionales
+ * @param {React.ReactNode} children - Contenido de la sección
  */
 export default function Section({ id, className = "", children }) {
     return (

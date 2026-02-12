@@ -1,10 +1,10 @@
-import { NAV_LINKS } from "../../utils/constants";
+import { NAV_LINKS, SOCIAL_LINKS } from "../../utils/constants";
 
 export default function Navbar({ onNavigateHome }) {
   return (
     <nav className="navbar navbar-expand-lg fixed-top navbar-dark py-3 glass-panel-heavy transition-all">
       <div className="container">
-        {/* Logo: Simple y tipográfico */}
+        {/* Logo */}
         <a className="navbar-brand fw-bold d-flex align-items-center gap-2" href="#" onClick={(e) => { e.preventDefault(); onNavigateHome(); }}>
           <span className="tracking-tight fw-bold text-white fs-4">Alfredo Andrés</span>
         </a>
