@@ -2,7 +2,7 @@
 
 ¡Hola! Bienvenido a mi portafolio digital.
 
- Aquí encontrarás una selección de mis trabajos más recientes y una visión clara de mi perfil técnico.
+Aquí encontrarás una selección de mis trabajos más recientes y una visión clara de mi perfil técnico.
 
 ## Sobre este Proyecto
 
