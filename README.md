@@ -2,7 +2,7 @@
 
 ¡Hola! Bienvenido a mi portafolio digital.
 
-Este proyecto no es solo una landing page; es una demostración viva de mi capacidad para crear experiencias web modernas, performantes y estéticamente cuidadas. Aquí encontrarás una selección de mis trabajos más recientes y una visión clara de mi perfil técnico.
+ Aquí encontrarás una selección de mis trabajos más recientes y una visión clara de mi perfil técnico.
 
 ## Sobre este Proyecto
 
