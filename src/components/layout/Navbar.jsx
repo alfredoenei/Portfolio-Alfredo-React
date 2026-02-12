@@ -1,4 +1,4 @@
-import { NAV_LINKS, SOCIAL_LINKS } from "../../utils/constants";
+import { NAV_LINKS } from "../../utils/constants";
 
 export default function Navbar({ onNavigateHome }) {
   return (

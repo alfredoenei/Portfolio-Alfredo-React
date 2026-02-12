@@ -17,7 +17,7 @@ export default function Projects({ onViewProject }) {
                     {PROJECTS.map((project, index) => (
                         <div key={index} className="col-lg-6 d-flex align-items-stretch fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
                             <div className="glass-panel p-0 overflow-hidden rounded-4 w-100 d-flex flex-column hover-lift transition-all shadow-lg border-secondary">
-                                {/* Image Video/GIF */}
+                                {/* Imagen / Video / GIF */}
                                 <div className="aspect-ratio-16-9 bg-darker border-bottom border-white border-opacity-10 position-relative group-hover-overlay overflow-hidden">
                                     {project.image ? (
                                         <img

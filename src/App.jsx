@@ -2,14 +2,14 @@ import { Suspense, lazy, useState } from "react";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
-// Lazy load sections for performance
+// Carga diferida (lazy loading) de las secciones para mejorar el rendimiento
 const Hero = lazy(() => import("./sections/Hero"));
 const Projects = lazy(() => import("./sections/Projects"));
 const Contact = lazy(() => import("./sections/Contact"));
 const ProjectDetails = lazy(() => import("./sections/ProjectDetails"));
 
 export default function App() {
-  const [view, setView] = useState('home'); // 'home' | 'project'
+  const [view, setView] = useState('home'); // 'home' (inicio) | 'project' (detalle de proyecto)
   const [selectedProject, setSelectedProject] = useState(null);
 
   const handleViewProject = (project) => {

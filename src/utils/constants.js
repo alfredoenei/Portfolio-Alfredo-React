@@ -4,9 +4,9 @@ export const NAV_LINKS = [
 ];
 
 export const HERO_STEPS = [
-  { id: 1, text: "Estrategia y Arquitectura 📐", completed: true, color: "from-blue-600 to-cyan-500" }, // Azul/Cyan
-  { id: 2, text: "Desarrollo Frontend & Backend 💻", completed: true, color: "from-purple-600 to-pink-500" }, // Púrpura/Rosa
-  { id: 3, text: "Optimización y Despliegue 🚀", completed: true, color: "from-green-600 to-teal-500" }, // Verde/Teal
+  { id: 1, text: "Estrategia y Arquitectura 📐", completed: true, color: "from-blue-600 to-cyan-500" }, // Azul / Cian
+  { id: 2, text: "Desarrollo Frontend & Backend 💻", completed: true, color: "from-purple-600 to-pink-500" }, // Púrpura / Rosa
+  { id: 3, text: "Optimización y Despliegue 🚀", completed: true, color: "from-green-600 to-teal-500" }, // Verde / Verde Azulado
 ];
 
 

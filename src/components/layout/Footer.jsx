@@ -13,7 +13,7 @@ export default function Footer() {
         </div>
 
         <div className="d-flex flex-column flex-md-row bg-dark bg-opacity-50 p-3 rounded-4 gap-4 align-items-center">
-          {/* Navigation Links */}
+          {/* Links Navegación */}
           <div className="d-flex gap-3">
             <a className="text-secondary text-decoration-none hover-white transition-colors small text-uppercase tracking-wider" href="#projects">Proyectos</a>
             <a className="text-secondary text-decoration-none hover-white transition-colors small text-uppercase tracking-wider" href="#contact">Contacto</a>
@@ -21,7 +21,7 @@ export default function Footer() {
 
           <div className="vr d-none d-md-block text-secondary opacity-25"></div>
 
-          {/* Social Icons */}
+          {/* Iconos Redes Sociales */}
           <div className="d-flex gap-3">
             <a className="text-secondary text-decoration-none hover-white transition-colors fs-5" href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="bi bi-linkedin"></i>

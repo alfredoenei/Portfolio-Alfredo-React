@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import GlowBackground from "../components/ui/GlowBackground";
 
 export default function ProjectDetails({ project, onBack }) {
-    // Scroll to top when component mounts
+    // Desplazar hacia arriba al montar el componente
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -14,7 +14,7 @@ export default function ProjectDetails({ project, onBack }) {
             <GlowBackground className="start-0 top-0" size={600} opacity="opacity-20" />
 
             <div className="container position-relative z-1 pt-4">
-                {/* Header / Back Button */}
+                {/* Encabezado / Botón de Volver */}
                 <div className="mb-5 fade-in-up">
                     <button
                         onClick={onBack}
@@ -25,7 +25,7 @@ export default function ProjectDetails({ project, onBack }) {
                 </div>
 
                 <div className="row g-5">
-                    {/* Left Column: Image/GIF */}
+                    {/* Columna Izquierda: Imagen / GIF */}
                     <div className="col-lg-7 fade-in-up delay-100">
                         <div className="glass-panel p-2 rounded-4 overflow-hidden border-secondary shadow-lg">
                             {project.image ? (
@@ -48,7 +48,7 @@ export default function ProjectDetails({ project, onBack }) {
                         </div>
                     </div>
 
-                    {/* Right Column: Details */}
+                    {/* Columna Derecha: Detalles */}
                     <div className="col-lg-5 fade-in-up delay-200">
                         <h1 className="display-5 fw-bold mb-3 text-gradient-primary-to-secondary">{project.title}</h1>
 
