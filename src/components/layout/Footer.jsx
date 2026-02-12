@@ -1,3 +1,5 @@
+import { SOCIAL_LINKS } from "../../utils/constants";
+
 export default function Footer() {
   return (
     <footer className="py-5 border-top border-secondary bg-darker">
@@ -13,18 +15,18 @@ export default function Footer() {
         <div className="d-flex flex-column flex-md-row bg-dark bg-opacity-50 p-3 rounded-4 gap-4 align-items-center">
           {/* Navigation Links */}
           <div className="d-flex gap-3">
-            <a className="text-secondary text-decoration-none hover-white transition-colors small text-uppercase tracking-wider" href="#features">Características</a>
-            <a className="text-secondary text-decoration-none hover-white transition-colors small text-uppercase tracking-wider" href="#pricing">Servicios</a>
+            <a className="text-secondary text-decoration-none hover-white transition-colors small text-uppercase tracking-wider" href="#projects">Proyectos</a>
+            <a className="text-secondary text-decoration-none hover-white transition-colors small text-uppercase tracking-wider" href="#contact">Contacto</a>
           </div>
 
           <div className="vr d-none d-md-block text-secondary opacity-25"></div>
 
           {/* Social Icons */}
           <div className="d-flex gap-3">
-            <a className="text-secondary text-decoration-none hover-white transition-colors fs-5" href="#" aria-label="LinkedIn">
+            <a className="text-secondary text-decoration-none hover-white transition-colors fs-5" href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="bi bi-linkedin"></i>
             </a>
-            <a className="text-secondary text-decoration-none hover-white transition-colors fs-5" href="#" aria-label="Github">
+            <a className="text-secondary text-decoration-none hover-white transition-colors fs-5" href="https://github.com/alfredoenei" target="_blank" rel="noopener noreferrer" aria-label="Github">
               <i className="bi bi-github"></i>
             </a>
             <a className="text-secondary text-decoration-none hover-white transition-colors fs-5" href="#" aria-label="Email">

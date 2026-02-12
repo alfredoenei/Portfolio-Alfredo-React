@@ -1,87 +1,44 @@
 export const NAV_LINKS = [
-  { href: "#features", label: "Características" },
-  { href: "#pricing", label: "Servicios" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#projects", label: "Proyectos" },
+  { href: "#contact", label: "Contacto" },
 ];
 
 export const HERO_STEPS = [
-  { id: 1, text: "Comprender tu visión y necesidades reales 🧠", completed: true },
-  { id: 2, text: "Diseñar una estrategia escalable 📐", completed: true },
-  { id: 3, text: "Desarrollo limpio y comunicación constante 🤝", completed: false },
-  { id: 4, text: "Lanzamiento y soporte continuo 🚀", completed: false },
+  { id: 1, text: "Estrategia y Arquitectura 📐", completed: true, color: "from-blue-600 to-cyan-500" }, // Azul/Cyan
+  { id: 2, text: "Desarrollo Frontend & Backend 💻", completed: true, color: "from-purple-600 to-pink-500" }, // Púrpura/Rosa
+  { id: 3, text: "Optimización y Despliegue 🚀", completed: true, color: "from-green-600 to-teal-500" }, // Verde/Teal
 ];
 
-export const FEATURES = [
-  {
-    title: "Arquitectura Escalable",
-    text: "Diseño modular y desacoplado listo para crecer. Evita la deuda técnica desde el primer commit.",
-    icon: "bi-diagram-3-fill",
-    color: "text-warning"
-  },
-  {
-    title: "Responsive & Mobile First",
-    text: "Experiencia de usuario fluida en cualquier dispositivo, optimizada con grillas modernas y CSS robusto.",
-    icon: "bi-phone-fill",
-    color: "text-info"
-  },
-  {
-    title: "Sistemas de Diseño",
-    text: "Implementación de tokens y componentes atómicos para una consistencia visual impecable y fácil mantenimiento.",
-    icon: "bi-palette-fill",
-    color: "text-primary"
-  },
-  {
-    title: "Rendimiento y SEO",
-    text: "Mejores prácticas de Web Vitals, carga diferida y semántica HTML para máxima visibilidad y velocidad.",
-    icon: "bi-speedometer2",
-    color: "text-success"
-  },
-  {
-    title: "CI/CD & DevOps Ready",
-    text: "Flujos de trabajo automatizados para despliegues seguros y rápidos en plataformas modernas como Vercel.",
-    icon: "bi-rocket-fill",
-    color: "text-danger"
-  },
-  {
-    title: "Código Documentado",
-    text: "Transparencia total. Código limpio, tipado y comentado para facilitar la colaboración en equipo.",
-    icon: "bi-code-square",
-    color: "text-secondary"
-  },
-];
 
-export const PRICING_PLANS = [
+export const PROJECTS = [
   {
-    name: "Desarrollo MVP",
-    price: "MVP",
-    period: "/sprint",
-    desc: "Para startups que necesitan lanzar rápido y validar.",
-    features: ["Prototipado rápido en React", "Arquitectura escalable desde el día 1", "Entrega continua (CI/CD)"],
-    cta: "Discutir MVP",
-    highlighted: false,
+    title: "Web de Arte",
+    description: "Plataforma para exhibición de arte con gestión de contenido dinámico.",
+    tags: ["MongoDB", "Angular", "Express", "Node.js"],
+    link: "#",
+    github: "https://github.com/alfredoenei",
+    image: "/assets/projects/web-de-arte.gif",
+    imagePlaceholder: "Web de Arte",
+    longDescription: "Una plataforma digital sofisticada diseñada para galerías y artistas. Construida sobre el stack MEAN (MongoDB, Express, Angular, Node.js), ofrece una gestión de contenido dinámica, permitiendo a los administradores curar exposiciones virtuales con facilidad. La interfaz de usuario, rápida y responsiva, asegura que las obras de arte sean las protagonistas, proporcionando una experiencia de visualización inmersiva."
   },
   {
-    name: "Full Stack Partner",
-    price: "Senior",
-    period: "/dev",
-    desc: "Colaboración a largo plazo para productos maduros.",
-    features: ["Desarrollo de features complejas", "Refactorización y Deuda Técnica", "Optimización de rendimiento", "Integración de APIs y Backend"],
-    cta: "Ver disponibilidad",
-    highlighted: true,
-  },
-  {
-    name: "Consultoría",
-    price: "Audit",
-    period: "/hora",
-    desc: "Asesoría técnica para equipos y empresas.",
-    features: ["Revisión de arquitectura", "Mejores prácticas de React", "Mentoria de equipo", "Estrategia de adopción tecnológica"],
-    cta: "Agendar sesión",
-    highlighted: false,
+    title: "Marketplace Simulation",
+    description: "Simulación completa de una plataforma de ventas con carrito y pagos.",
+    tags: ["React", "Bootstrap", "Vite"],
+    github: "https://github.com/alfredoenei/React-saas-landing",
+    image: "/assets/projects/marketplace.gif",
+    imagePlaceholder: "Marketplace",
+    longDescription: "Este proyecto es una simulación integral de un entorno de comercio electrónico moderno. Desarrollado con React y Vite para un rendimiento óptimo, integra un sistema de carrito de compras reactivo, gestión de estado global, y una pasarela de pagos simulada. La interfaz, diseñada con Bootstrap, asegura una experiencia de usuario fluida y responsiva, permitiendo filtrar productos, ver detalles en profundidad y completar transacciones simuladas."
   },
 ];
 
 export const CONTACT_REASONS = [
-  "Discutir oportunidades de colaboración",
-  "Consultoría sobre desarrollo React",
-  "Feedback sobre este portafolio"
+  "Discutir oportunidades laborales",
+  "Colaboración en proyectos",
+  "Consultas sobre desarrollo web"
 ];
+
+export const SOCIAL_LINKS = {
+  github: "https://github.com/alfredoenei",
+  linkedin: "https://www.linkedin.com/in/alfredo-enei-61b61034b"
+};

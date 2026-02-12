@@ -69,13 +69,13 @@ export default function Contact() {
       <div className="container py-5">
         <div className="row g-5 align-items-stretch">
           <div className="col-lg-5 fade-in-up">
-            <h2 className="fw-bold display-6 mb-3">Contáctanos</h2>
+            <h2 className="fw-bold display-6 mb-3">Contáctame</h2>
             <p className="text-secondary lead mb-4">
-              ¿Tienes algún proyecto en mente o simplemente quieres saludar? Completa el formulario a continuación.
+              ¿Tienes una idea increible? Hablemos y hagámosla realidad.
             </p>
 
             <div className="mt-4 p-4 rounded-4 border border-secondary bg-dark bg-opacity-50">
-              <div className="fw-semibold mb-3 text-white">¿Por qué contactarnos?</div>
+              <div className="fw-semibold mb-3 text-white">¿Por qué trabajar conmigo?</div>
               <ul className="text-secondary mb-0 ps-3 vstack gap-2">
                 {CONTACT_REASONS.map((reason) => (
                   <li key={reason}>{reason}</li>
@@ -89,7 +89,7 @@ export default function Contact() {
               {status.sent && (
                 <div className="alert alert-success d-flex align-items-center gap-2" role="alert">
                   <i className="bi bi-check-circle-fill"></i>
-                  ✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
+                  ✅ ¡Mensaje enviado con éxito! Me pondré en contacto pronto.
                 </div>
               )}
 

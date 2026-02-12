@@ -185,6 +185,10 @@ a {
   animation-delay: 300ms;
 }
 
+.animate-fade-in {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
 /* Degradados de Texto */
 .text-gradient {
   background: linear-gradient(135deg, #fff 30%, #bcccd1 100%);
@@ -214,9 +218,7 @@ a {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.shadow-primary-subtle {
-  box-shadow: 0 20px 40px -10px rgba(195, 242, 52, 0.15);
-}
+
 
 /* Gradientes */
 .bg-gradient-to-t {

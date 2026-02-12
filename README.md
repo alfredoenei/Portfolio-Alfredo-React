@@ -1,46 +1,51 @@
-# Portafolio Profesional - Alfredo Enei 
+# Portafolio de Desarrollo Full Stack | Alfredo Andrés
 
-¡Hola! Bienvenido al repositorio de mi portafolio personal.
+¡Hola! Bienvenido a mi portafolio digital.
 
-El objetivo de este proyecto va más allá de presentar una landing page estética; busca demostrar una **arquitectura sólida en React**, escalable y diseñada con estándares profesionales de la industria.
+Este proyecto no es solo una landing page; es una demostración viva de mi capacidad para crear experiencias web modernas, performantes y estéticamente cuidadas. Aquí encontrarás una selección de mis trabajos más recientes y una visión clara de mi perfil técnico.
 
-## Arquitectura y Tecnologías 
+## Sobre este Proyecto
 
-Este proyecto ha sido construido evitando la complejidad innecesaria, priorizando el rendimiento y la mantenibilidad:
+Construido desde cero utilizando tecnologías modernas, este portafolio refleja mi filosofía de desarrollo: **código limpio, arquitectura escalable y diseño centrado en el usuario**.
 
-*   **React 19**: Utilizando las últimas características estables para una gestión de estado eficiente.
-*   **Vite**: Configuración optimizada para un entorno de desarrollo rápido y builds ligeros.
-*   **Bootstrap 5 + Custom CSS**: Una implementación híbrida que aprovecha la grilla y utilidad de Bootstrap, pero con una capa de **Diseño Personalizado** (variables CSS, Glassmorphism, Dark Mode) para evitar el aspecto genérico.
-*   **Clean Code**: Estructura modular, nombres semánticos y componentes reutilizables.
+### Tech Stack
+-   **React + Vite**: Para una experiencia de desarrollo ultrarrápida y un rendimiento en producción optimizado.
+-   **Bootstrap 5 (Customizado)**: Utilizando utilidades modernas y un sistema de diseño personalizado (glassmorphism, degradados) para romper con el aspecto "estándar".
+-   **CSS Modules / Custom CSS**: Estilos refinados para animaciones suaves y una identidad visual única.
 
+## Proyectos Destacados (Integrados)
 
+Dentro del portafolio podrás explorar demos interactivas y detalles técnicos de:
 
-Si estás evaluando mi perfil técnico, te invito a revisar estos puntos específicos en el código:
+1.  **Web de Arte (MEAN Stack)**: Una plataforma completa para galerías de arte, gestionando contenido dinámico con MongoDB, Express, Angular y Node.js.
+2.  **Marketplace Simulation**: Un simulador de comercio electrónico con carrito de compras, pasarela de pagos simulada y gestión de estado compleja.
 
-1.  **Lógica y Estado (**`src/sections/Hero.jsx`**)**: Implementación de un componente interactivo que gestiona el estado de una lista de tareas, demostrando manejo de inmutabilidad y eventos en React.
-2.  **Validación de Formularios (**`src/sections/Contact.jsx`**)**: Desarrollo de un sistema de validación manual ("vanilla") eficiente, controlando inputs controlados, estados de error y simulación de asincronía (API calls), sin depender de librerías externas pesadas.
-3.  **Componentización**: Observa cómo secciones como `Features` o `Pricing` reutilizan estructuras de datos para renderizar UI de forma dinámica y limpia.
+## Cómo correr este proyecto localmente
 
-## Ejecución Local 
+Si eres reclutador o desarrollador y quieres ver el código en acción en tu máquina:
 
-Para correr este proyecto en tu entorno local, solo necesitas Node.js instalado:
-
-1.  Clona el repositorio:
+1.  **Clonar el repositorio**:
     ```bash
-    git clone https://github.com/tu-usuario/react-saas-landing.git
+    git clone https://github.com/alfredoenei/Portfolio-Alfredo-React.git
     ```
-2.  Instala las dependencias:
+2.  **Instalar dependencias**:
     ```bash
     npm install
     ```
-3.  Inicia el servidor de desarrollo:
+3.  **Correr el servidor de desarrollo**:
     ```bash
     npm run dev
     ```
+4.  **Construir para producción**:
+    ```bash
+    npm run build
+    ```
 
-El sitio estará disponible inmediatamente en tu navegador.
+## Contacto
+
+¿Te interesa mi perfil o quieres colaborar?
+-   [LinkedIn](https://www.linkedin.com/in/alfredo-enei-61b61034b)
+-   [GitHub](https://github.com/alfredoenei)
 
 ---
-
-Desarrollado por **Alfredo Enei**.
-Estoy abierto a nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!
+Desarrollado por Alfredo Andrés Enei
