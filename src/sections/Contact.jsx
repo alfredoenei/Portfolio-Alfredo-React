@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { CONTACT_REASONS } from "../utils/constants";
 import Section from "../components/ui/Section";
 import GlowBackground from "../components/ui/GlowBackground";
+import FadeIn from "../components/animations/FadeIn";
 
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
@@ -68,93 +69,97 @@ export default function Contact() {
 
       <div className="container py-5">
         <div className="row g-5 align-items-stretch">
-          <div className="col-lg-5 fade-in-up">
-            <h2 className="fw-bold display-6 mb-3">Contáctame</h2>
-            <p className="text-secondary lead mb-4">
-              ¿Tienes una idea increible? Hablemos y hagámosla realidad.
-            </p>
+          <div className="col-lg-5">
+            <FadeIn direction="right">
+              <h2 className="fw-bold display-6 mb-3">Contáctame</h2>
+              <p className="text-secondary lead mb-4">
+                ¿Tienes una idea increible? Hablemos y hagámosla realidad.
+              </p>
 
-            <div className="mt-4 p-4 rounded-4 border border-secondary bg-dark bg-opacity-50">
-              <div className="fw-semibold mb-3 text-white">¿Por qué trabajar conmigo?</div>
-              <ul className="text-secondary mb-0 ps-3 vstack gap-2">
-                {CONTACT_REASONS.map((reason) => (
-                  <li key={reason}>{reason}</li>
-                ))}
-              </ul>
-            </div>
+              <div className="mt-4 p-4 rounded-4 border border-secondary bg-dark bg-opacity-50">
+                <div className="fw-semibold mb-3 text-white">¿Por qué trabajar conmigo?</div>
+                <ul className="text-secondary mb-0 ps-3 vstack gap-2">
+                  {CONTACT_REASONS.map((reason) => (
+                    <li key={reason}>{reason}</li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
           </div>
 
-          <div className="col-lg-7 fade-in-up delay-100">
-            <div className="h-100 p-4 p-md-5 rounded-4 glass-panel shadow-lg">
-              {status.sent && (
-                <div className="alert alert-success d-flex align-items-center gap-2" role="alert">
-                  <i className="bi bi-check-circle-fill"></i>
-                  ✅ ¡Mensaje enviado con éxito! Me pondré en contacto pronto.
-                </div>
-              )}
+          <div className="col-lg-7">
+            <FadeIn delay={0.2} direction="left">
+              <div className="h-100 p-4 p-md-5 rounded-4 glass-panel shadow-lg">
+                {status.sent && (
+                  <div className="alert alert-success d-flex align-items-center gap-2" role="alert">
+                    <i className="bi bi-check-circle-fill"></i>
+                    ✅ ¡Mensaje enviado con éxito! Me pondré en contacto pronto.
+                  </div>
+                )}
 
-              <form onSubmit={handleSubmit} noValidate>
-                <div className="mb-4">
-                  <label className="form-label text-sm fw-medium text-secondary" htmlFor="name">Nombre</label>
-                  <input
-                    id="name"
-                    name="name"
-                    className={`form-control form-control-lg bg-dark border-secondary text-white focus-primary ${touched.name && errors.name ? "is-invalid" : ""}`}
-                    value={values.name}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    placeholder="Tu nombre"
-                  />
-                  {touched.name && errors.name && (
-                    <div className="invalid-feedback">{errors.name}</div>
-                  )}
-                </div>
+                <form onSubmit={handleSubmit} noValidate>
+                  <div className="mb-4">
+                    <label className="form-label text-sm fw-medium text-secondary" htmlFor="name">Nombre</label>
+                    <input
+                      id="name"
+                      name="name"
+                      className={`form-control form-control-lg bg-dark border-secondary text-white focus-primary ${touched.name && errors.name ? "is-invalid" : ""}`}
+                      value={values.name}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      placeholder="Tu nombre"
+                    />
+                    {touched.name && errors.name && (
+                      <div className="invalid-feedback">{errors.name}</div>
+                    )}
+                  </div>
 
-                <div className="mb-4">
-                  <label className="form-label text-sm fw-medium text-secondary" htmlFor="email">Email</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    className={`form-control form-control-lg bg-dark border-secondary text-white focus-primary ${touched.email && errors.email ? "is-invalid" : ""}`}
-                    value={values.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    placeholder="tucorreo@ejemplo.com"
-                  />
-                  {touched.email && errors.email && (
-                    <div className="invalid-feedback">{errors.email}</div>
-                  )}
-                </div>
+                  <div className="mb-4">
+                    <label className="form-label text-sm fw-medium text-secondary" htmlFor="email">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      className={`form-control form-control-lg bg-dark border-secondary text-white focus-primary ${touched.email && errors.email ? "is-invalid" : ""}`}
+                      value={values.email}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      placeholder="tucorreo@ejemplo.com"
+                    />
+                    {touched.email && errors.email && (
+                      <div className="invalid-feedback">{errors.email}</div>
+                    )}
+                  </div>
 
-                <div className="mb-4">
-                  <label className="form-label text-sm fw-medium text-secondary" htmlFor="message">Mensaje</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className={`form-control form-control-lg bg-dark border-secondary text-white focus-primary ${touched.message && errors.message ? "is-invalid" : ""}`}
-                    value={values.message}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    placeholder="Cuéntanos sobre tu proyecto..."
-                  />
-                  {touched.message && errors.message && (
-                    <div className="invalid-feedback">{errors.message}</div>
-                  )}
-                </div>
+                  <div className="mb-4">
+                    <label className="form-label text-sm fw-medium text-secondary" htmlFor="message">Mensaje</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      className={`form-control form-control-lg bg-dark border-secondary text-white focus-primary ${touched.message && errors.message ? "is-invalid" : ""}`}
+                      value={values.message}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      placeholder="Cuéntanos sobre tu proyecto..."
+                    />
+                    {touched.message && errors.message && (
+                      <div className="invalid-feedback">{errors.message}</div>
+                    )}
+                  </div>
 
-                <button
-                  type="submit"
-                  className="btn btn-primary btn-lg w-100 fw-bold"
-                  disabled={status.sending}
-                >
-                  {status.sending ? (
-                    <span><span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Enviando...</span>
-                  ) : "Enviar Mensaje"}
-                </button>
-              </form>
-            </div>
+                  <button
+                    type="submit"
+                    className="btn btn-primary btn-lg w-100 fw-bold"
+                    disabled={status.sending}
+                  >
+                    {status.sending ? (
+                      <span><span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Enviando...</span>
+                    ) : "Enviar Mensaje"}
+                  </button>
+                </form>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </div>
