@@ -20,26 +20,6 @@ Dentro del portafolio podrás explorar demos interactivas y detalles técnicos d
 1.  **Web de Arte (MEAN Stack)**: Una plataforma completa para galerías de arte, gestionando contenido dinámico con MongoDB, Express, Angular y Node.js.
 2.  **Marketplace Simulation**: Un simulador de comercio electrónico con carrito de compras, pasarela de pagos simulada y gestión de estado compleja.
 
-## Cómo correr este proyecto localmente
-
-Si eres reclutador o desarrollador y quieres ver el código en acción en tu máquina:
-
-1.  **Clonar el repositorio**:
-    ```bash
-    git clone https://github.com/alfredoenei/Portfolio-Alfredo-React.git
-    ```
-2.  **Instalar dependencias**:
-    ```bash
-    npm install
-    ```
-3.  **Correr el servidor de desarrollo**:
-    ```bash
-    npm run dev
-    ```
-4.  **Construir para producción**:
-    ```bash
-    npm run build
-    ```
 
 ## Contacto
 
