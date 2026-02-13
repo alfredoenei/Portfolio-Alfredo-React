@@ -9,6 +9,8 @@ import App from './App.jsx'
 
 import ErrorBoundary from './components/ErrorBoundary'
 
+console.log("App starting...");
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
