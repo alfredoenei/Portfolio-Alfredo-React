@@ -1,6 +1,8 @@
 import { SOCIAL_LINKS } from "../../utils/constants";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
   return (
     <footer className="py-5 border-top border-secondary bg-darker">
       <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
@@ -9,14 +11,14 @@ export default function Footer() {
             <i className="bi bi-hexagon-fill text-primary small"></i>
             Alfredo Enei
           </div>
-          <div className="text-secondary small">© {new Date().getFullYear()} Todos los derechos reservados.</div>
+          <div className="text-secondary small">© {new Date().getFullYear()} {t('footer.rights')}</div>
         </div>
 
         <div className="d-flex flex-column flex-md-row bg-dark bg-opacity-50 p-3 rounded-4 gap-4 align-items-center">
           {/* Links Navegación */}
           <div className="d-flex gap-3">
-            <a className="text-secondary text-decoration-none hover-white transition-colors small text-uppercase tracking-wider" href="#projects">Proyectos</a>
-            <a className="text-secondary text-decoration-none hover-white transition-colors small text-uppercase tracking-wider" href="#contact">Contacto</a>
+            <a className="text-secondary text-decoration-none hover-white transition-colors small text-uppercase tracking-wider" href="#projects">{t('nav.projects')}</a>
+            <a className="text-secondary text-decoration-none hover-white transition-colors small text-uppercase tracking-wider" href="#contact">{t('nav.contact')}</a>
           </div>
 
           <div className="vr d-none d-md-block text-secondary opacity-25"></div>

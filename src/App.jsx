@@ -1,4 +1,5 @@
 import { Suspense, lazy, useState } from "react";
+import { LanguageProvider } from "./context/LanguageContext";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
@@ -23,7 +24,7 @@ export default function App() {
   };
 
   return (
-    <>
+    <LanguageProvider>
       <Navbar onNavigateHome={handleBack} />
       <main>
         <Suspense fallback={<div className="min-vh-100 d-flex align-items-center justify-content-center text-white">Cargando...</div>}>
@@ -39,6 +40,6 @@ export default function App() {
         </Suspense>
       </main>
       <Footer />
-    </>
+    </LanguageProvider>
   );
 }

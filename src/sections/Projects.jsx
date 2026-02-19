@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 import { PROJECTS } from "../utils/constants";
 import Section from "../components/ui/Section";
 import GlowBackground from "../components/ui/GlowBackground";
@@ -6,6 +7,7 @@ import StaggerContainer from "../components/animations/StaggerContainer";
 import FadeIn from "../components/animations/FadeIn";
 
 export default function Projects({ onViewProject }) {
+    const { t } = useLanguage();
     // Variantes para los items del grid, coincidentes con StaggerContainer
     const itemVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -22,11 +24,11 @@ export default function Projects({ onViewProject }) {
 
             <div className="container py-5 position-relative z-1">
                 <FadeIn>
-                    <h2 className="display-5 fw-bold text-center mb-2 text-white">Mis Proyectos</h2>
+                    <h2 className="display-5 fw-bold text-center mb-2 text-white">{t('projects.title')}</h2>
                 </FadeIn>
                 <FadeIn delay={0.1}>
                     <p className="text-secondary text-center lead mb-5">
-                        Una selección de trabajos recientes.
+                        {t('projects.subtitle')}
                     </p>
                 </FadeIn>
 
@@ -47,7 +49,7 @@ export default function Projects({ onViewProject }) {
                                     {project.image ? (
                                         <motion.img
                                             src={project.image}
-                                            alt={project.title}
+                                            alt={t(`projects.list.${project.key}.title`) !== `projects.list.${project.key}.title` ? t(`projects.list.${project.key}.title`) : project.title}
                                             className="w-100 h-100 object-fit-cover"
                                             whileHover={{ scale: 1.05 }}
                                             transition={{ duration: 0.5 }}
@@ -66,9 +68,18 @@ export default function Projects({ onViewProject }) {
 
                                 <div className="p-4 d-flex flex-column flex-grow-1">
                                     <div className="mb-3">
-                                        <h3 className="h4 fw-bold text-white mb-2">{project.title}</h3>
+                                        <h3 className="h4 fw-bold text-white mb-2">
+                                            {t(`projects.list.${project.key}.title`) !== `projects.list.${project.key}.title`
+                                                ? t(`projects.list.${project.key}.title`)
+                                                : project.title}
+                                        </h3>
                                         <p className="text-secondary mb-4 small lh-lg">
-                                            {project.description}
+                                            {/* Note: This assumes project object will be updated to support EN/ES, 
+                                                currently using description as fallback or needs manual handling if not in constants yet.
+                                                Ideally constants should have description_es and description_en */}
+                                            {t(`projects.list.${project.key}.description`) !== `projects.list.${project.key}.description`
+                                                ? t(`projects.list.${project.key}.description`)
+                                                : project.description}
                                         </p>
                                     </div>
 
@@ -90,7 +101,7 @@ export default function Projects({ onViewProject }) {
                                                 whileHover={{ scale: 1.05 }}
                                                 whileTap={{ scale: 0.95 }}
                                             >
-                                                <i className="bi bi-github"></i> Código
+                                                <i className="bi bi-github"></i> {t('projects.viewCode')}
                                             </motion.a>
                                             <motion.button
                                                 onClick={() => onViewProject(project)}
@@ -98,7 +109,7 @@ export default function Projects({ onViewProject }) {
                                                 whileHover={{ scale: 1.05 }}
                                                 whileTap={{ scale: 0.95 }}
                                             >
-                                                Ver más <i className="bi bi-eye"></i>
+                                                {t('projects.viewProject')} <i className="bi bi-eye"></i>
                                             </motion.button>
                                         </div>
                                     </div>

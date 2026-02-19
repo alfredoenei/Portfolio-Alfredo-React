@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useLanguage } from '../context/LanguageContext';
 import { CONTACT_REASONS } from "../utils/constants";
 import Section from "../components/ui/Section";
 import GlowBackground from "../components/ui/GlowBackground";
@@ -9,6 +10,7 @@ function isValidEmail(email) {
 }
 
 export default function Contact() {
+  const { t } = useLanguage();
   // Manejo de estado para el formulario. 
   // Separamos los valores, si el usuario ya tocó el campo (touched) y el estado del envío (status).
   const [values, setValues] = useState({ name: "", email: "", message: "" });
@@ -19,12 +21,12 @@ export default function Contact() {
   // Si validáramos en cada render sin control, podríamos afectar el rendimiento en forms grandes.
   const errors = useMemo(() => {
     const e = {};
-    if (!values.name.trim()) e.name = "El nombre es requerido.";
-    if (!values.email.trim()) e.email = "El email es requerido.";
-    else if (!isValidEmail(values.email)) e.email = "Por favor ingresa un email válido.";
-    if (!values.message.trim()) e.message = "El mensaje es requerido.";
+    if (!values.name.trim()) e.name = t('contact.errors.nameRequired');
+    if (!values.email.trim()) e.email = t('contact.errors.emailRequired');
+    else if (!isValidEmail(values.email)) e.email = t('contact.errors.emailInvalid');
+    if (!values.message.trim()) e.message = t('contact.errors.messageRequired');
     return e;
-  }, [values]);
+  }, [values, t]);
 
   // Si el objeto de errores tiene claves, es que algo falta
   const hasErrors = Object.keys(errors).length > 0;
@@ -71,16 +73,16 @@ export default function Contact() {
         <div className="row g-5 align-items-stretch">
           <div className="col-lg-5">
             <FadeIn direction="right">
-              <h2 className="fw-bold display-6 mb-3">Contáctame</h2>
+              <h2 className="fw-bold display-6 mb-3">{t('contact.title')}</h2>
               <p className="text-secondary lead mb-4">
-                ¿Tienes una idea increible? Hablemos y hagámosla realidad.
+                {t('contact.subtitle')}
               </p>
 
               <div className="mt-4 p-4 rounded-4 border border-secondary bg-dark bg-opacity-50">
-                <div className="fw-semibold mb-3 text-white">¿Por qué trabajar conmigo?</div>
+                <div className="fw-semibold mb-3 text-white">{t('contact.reasonsLabel')}</div>
                 <ul className="text-secondary mb-0 ps-3 vstack gap-2">
-                  {CONTACT_REASONS.map((reason) => (
-                    <li key={reason}>{reason}</li>
+                  {CONTACT_REASONS.map((reasonKey) => (
+                    <li key={reasonKey}>{t(reasonKey)}</li>
                   ))}
                 </ul>
               </div>
@@ -155,7 +157,7 @@ export default function Contact() {
                   >
                     {status.sending ? (
                       <span><span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Enviando...</span>
-                    ) : "Enviar Mensaje"}
+                    ) : t('contact.sendEmail')}
                   </button>
                 </form>
               </div>

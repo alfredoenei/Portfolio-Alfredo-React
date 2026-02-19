@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function ProjectDetails({ project, onBack }) {
+    const { t } = useLanguage();
     // Desplazar hacia arriba al montar el componente
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -29,7 +31,11 @@ export default function ProjectDetails({ project, onBack }) {
 
                     {/* Header con botón de cerrar */}
                     <div className="p-3 border-bottom border-secondary border-opacity-25 d-flex justify-content-between align-items-center bg-darker">
-                        <h2 className="h5 m-0 text-white fw-bold">{project.title}</h2>
+                        <h2 className="h5 m-0 text-white fw-bold">
+                            {t(`projects.list.${project.key}.title`) !== `projects.list.${project.key}.title`
+                                ? t(`projects.list.${project.key}.title`)
+                                : project.title}
+                        </h2>
                         <button
                             onClick={onBack}
                             className="btn btn-sm btn-dark rounded-circle d-flex align-items-center justify-content-center border border-secondary"
@@ -48,7 +54,7 @@ export default function ProjectDetails({ project, onBack }) {
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         src={project.image}
-                                        alt={project.title}
+                                        alt={t(`projects.list.${project.key}.title`) !== `projects.list.${project.key}.title` ? t(`projects.list.${project.key}.title`) : project.title}
                                         className="img-fluid rounded shadow-sm"
                                         style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain" }}
                                     />
@@ -73,7 +79,10 @@ export default function ProjectDetails({ project, onBack }) {
                                         ))}
                                     </div>
                                     <p className="text-gray-300 lh-lg">
-                                        {project.longDescription || project.description}
+                                        {/* Fallback to original description if translation not found or key missing */}
+                                        {t(`projects.list.${project.key}.longDescription`) !== `projects.list.${project.key}.longDescription`
+                                            ? t(`projects.list.${project.key}.longDescription`)
+                                            : (project.longDescription || project.description)}
                                     </p>
                                 </div>
 
@@ -84,7 +93,7 @@ export default function ProjectDetails({ project, onBack }) {
                                         rel="noopener noreferrer"
                                         className="btn btn-primary d-flex align-items-center justify-content-center gap-2"
                                     >
-                                        <i className="bi bi-github"></i> Ver Código Fuente
+                                        <i className="bi bi-github"></i> {t('projects.viewCode')}
                                     </a>
                                 </div>
                             </div>

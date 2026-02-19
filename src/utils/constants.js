@@ -1,18 +1,19 @@
 export const NAV_LINKS = [
-  { href: "#projects", label: "Proyectos" },
-  { href: "#contact", label: "Contacto" },
+  { href: "#projects", key: "nav.projects" },
+  { href: "#contact", key: "nav.contact" },
 ];
 
 export const HERO_STEPS = [
-  { id: 1, text: "Estrategia y Arquitectura 📐", completed: true, color: "from-blue-600 to-cyan-500" }, // Azul / Cian
-  { id: 2, text: "Desarrollo Frontend & Backend 💻", completed: true, color: "from-purple-600 to-pink-500" }, // Púrpura / Rosa
-  { id: 3, text: "Optimización y Despliegue 🚀", completed: true, color: "from-green-600 to-teal-500" }, // Verde / Verde Azulado
+  { id: 1, text: "Estrategia y Arquitectura 📐", key: "strategy", completed: true, color: "from-blue-600 to-cyan-500" }, // Azul / Cian
+  { id: 2, text: "Desarrollo Frontend & Backend 💻", key: "development", completed: true, color: "from-purple-600 to-pink-500" }, // Púrpura / Rosa
+  { id: 3, text: "Optimización y Despliegue 🚀", key: "optimization", completed: true, color: "from-green-600 to-teal-500" }, // Verde / Verde Azulado
 ];
 
 
 export const PROJECTS = [
   {
     title: "Web de Arte",
+    key: "artWeb",
     description: "Plataforma para exhibición de arte con gestión de contenido dinámico.",
     tags: ["MongoDB", "Angular", "Express", "Node.js"],
     link: "#",
@@ -23,6 +24,7 @@ export const PROJECTS = [
   },
   {
     title: "Marketplace Simulation",
+    key: "marketplace",
     description: "Simulación completa de una plataforma de ventas con carrito y pagos.",
     tags: ["React", "Bootstrap", "Vite"],
     github: "https://github.com/alfredoenei/React-saas-landing",
@@ -33,9 +35,9 @@ export const PROJECTS = [
 ];
 
 export const CONTACT_REASONS = [
-  "Discutir oportunidades laborales",
-  "Colaboración en proyectos",
-  "Consultas sobre desarrollo web"
+  "contact.reasons.jobs",
+  "contact.reasons.collab",
+  "contact.reasons.consulting"
 ];
 
 export const SOCIAL_LINKS = {

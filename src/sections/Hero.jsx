@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 import { HERO_STEPS } from '../utils/constants';
 import FadeIn from '../components/animations/FadeIn';
 
@@ -8,6 +9,7 @@ import FadeIn from '../components/animations/FadeIn';
  * El fondo y el contenido cambian según el "paso" actual del carrusel.
  */
 export default function Hero() {
+  const { t } = useLanguage();
   const [activeStep, setActiveStep] = useState(0);
 
   useEffect(() => {
@@ -60,7 +62,7 @@ export default function Hero() {
                 className="badge bg-dark border border-secondary text-white rounded-pill px-4 py-2 fs-6 shadow-lg fw-normal tracking-wide d-inline-block"
               >
                 <span className="opacity-50 me-2">Fase {currentStep.id}:</span>
-                {currentStep.text}
+                {t(`hero.steps.${currentStep.key}`)}
               </motion.span>
             </AnimatePresence>
           </div>
@@ -68,16 +70,15 @@ export default function Hero() {
           {/* Título Principal */}
           <FadeIn delay={0.1}>
             <h1 className="display-3 fw-bold text-white mb-4 lh-sm tracking-tight">
-              Hola, soy Alfredo. <br />
-              <span className="text-gradient">Desarrollador Full Stack.</span>
+              {t('hero.greeting')} <br />
+              <span className="text-gradient">{t('hero.role')}</span>
             </h1>
           </FadeIn>
 
           {/* Subtítulo Estático pero impactante */}
           <FadeIn delay={0.2}>
             <p className="lead text-secondary mb-5 mx-auto fs-5" style={{ maxWidth: '750px' }}>
-              Creo <span className="text-white fw-medium">experiencias digitales fluidas</span>.
-              Especializado en transformar ideas complejas en productos web modernos y escalables.
+              {t('hero.description')}
             </p>
           </FadeIn>
 
@@ -90,7 +91,7 @@ export default function Hero() {
                 className="btn btn-primary btn-lg px-5 py-3 fs-6"
                 href="#projects"
               >
-                Ver Proyectos
+                {t('hero.cta.projects')}
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.05 }}
@@ -98,7 +99,7 @@ export default function Hero() {
                 className="btn btn-outline-light btn-lg px-5 py-3 fs-6"
                 href="#contact"
               >
-                Contactar
+                {t('hero.cta.contact')}
               </motion.a>
             </div>
           </FadeIn>
