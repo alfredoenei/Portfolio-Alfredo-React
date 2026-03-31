@@ -27,7 +27,7 @@ export const PROJECTS = [
     key: "marketplace",
     description: "Simulación completa de una plataforma de ventas con carrito y pagos.",
     tags: ["React", "Bootstrap", "Vite"],
-    github: "https://github.com/alfredoenei/React-saas-landing",
+    github: "https://github.com/alfredoenei/E-commerce-Fullstack",
     image: "/assets/projects/marketplace.gif",
     imagePlaceholder: "Marketplace",
     longDescription: "Este proyecto es una simulación integral de un entorno de comercio electrónico moderno. Desarrollado con React y Vite para un rendimiento óptimo, integra un sistema de carrito de compras reactivo, gestión de estado global, y una pasarela de pagos simulada. La interfaz, diseñada con Bootstrap, asegura una experiencia de usuario fluida y responsiva, permitiendo filtrar productos, ver detalles en profundidad y completar transacciones simuladas."
