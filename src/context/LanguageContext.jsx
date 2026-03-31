@@ -1,18 +1,13 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { translations } from '../utils/translations';
 
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-    const [language, setLanguage] = useState('es'); // Default to Spanish
-
-    // Optional: Load from localStorage on mount
-    useEffect(() => {
+    const [language, setLanguage] = useState(() => {
         const savedLanguage = localStorage.getItem('language');
-        if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'es')) {
-            setLanguage(savedLanguage);
-        }
-    }, []);
+        return (savedLanguage === 'en' || savedLanguage === 'es') ? savedLanguage : 'es';
+    });
 
     const toggleLanguage = () => {
         const newLang = language === 'es' ? 'en' : 'es';
@@ -47,6 +42,7 @@ export function LanguageProvider({ children }) {
     );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useLanguage() {
     const context = useContext(LanguageContext);
     if (!context) {

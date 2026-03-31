@@ -50,7 +50,7 @@ export default function Navbar({ onNavigateHome }) {
             </button>
 
             <a
-              className="text-secondary hover-white transition-colors fs-5 me-2"
+              className="text-secondary hover-white transition-colors fs-5 me-2 d-flex align-items-center"
               href={SOCIAL_LINKS.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -58,7 +58,21 @@ export default function Navbar({ onNavigateHome }) {
             >
               <i className="bi bi-linkedin"></i>
             </a>
-            <a className="btn btn-outline-light rounded-pill px-4 btn-sm py-2" href="#contact">{t('nav.contactBtn')}</a>
+            <div className="d-flex gap-2">
+              <a 
+                className="btn btn-outline-light rounded-pill px-4 btn-sm py-2 d-flex align-items-center gap-2" 
+                href="/assets/CV-ALFREDO-ACTUALIZADO-2026.pdf" 
+                download="CV_Alfredo_Enei.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-download"></i>
+                {t('nav.downloadCv')}
+              </a>
+              <a className="btn btn-outline-light rounded-pill px-4 btn-sm py-2 d-flex align-items-center" href="#contact">
+                {t('nav.contactBtn')}
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -1,68 +1,24 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { useLanguage } from '../context/LanguageContext';
 import { CONTACT_REASONS } from "../utils/constants";
 import Section from "../components/ui/Section";
 import GlowBackground from "../components/ui/GlowBackground";
 import FadeIn from "../components/animations/FadeIn";
 
-function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
-}
-
 export default function Contact() {
   const { t } = useLanguage();
-  // Manejo de estado para el formulario. 
-  // Separamos los valores, si el usuario ya tocó el campo (touched) y el estado del envío (status).
-  const [values, setValues] = useState({ name: "", email: "", message: "" });
-  const [touched, setTouched] = useState({ name: false, email: false, message: false });
-  const [status, setStatus] = useState({ sending: false, sent: false });
+  const [copied, setCopied] = useState(false);
+  const email = "alfredoenei432@gmail.com";
 
-  // useMemo es clave acá: solo recalculamos los errores si cambian los valores.
-  // Si validáramos en cada render sin control, podríamos afectar el rendimiento en forms grandes.
-  const errors = useMemo(() => {
-    const e = {};
-    if (!values.name.trim()) e.name = t('contact.errors.nameRequired');
-    if (!values.email.trim()) e.email = t('contact.errors.emailRequired');
-    else if (!isValidEmail(values.email)) e.email = t('contact.errors.emailInvalid');
-    if (!values.message.trim()) e.message = t('contact.errors.messageRequired');
-    return e;
-  }, [values, t]);
-
-  // Si el objeto de errores tiene claves, es que algo falta
-  const hasErrors = Object.keys(errors).length > 0;
-
-  function handleChange(ev) {
-    const { name, value } = ev.target;
-    setValues((v) => ({ ...v, [name]: value }));
-    // Si el usuario empieza a escribir de nuevo, reseteamos el estado de "enviado".
-    setStatus({ sending: false, sent: false });
-  }
-
-  function handleBlur(ev) {
-    // Marcamos el campo como "tocado" cuando el usuario sale de él.
-    // Así no le mostramos errores molestos antes de que termine de escribir.
-    const { name } = ev.target;
-    setTouched((t) => ({ ...t, [name]: true }));
-  }
-
-  async function handleSubmit(ev) {
-    ev.preventDefault();
-
-    // Al intentar enviar, marcamos todo como tocado para que salten los errores si los hay.
-    setTouched({ name: true, email: true, message: true });
-    if (hasErrors) return;
-
-    setStatus({ sending: true, sent: false });
-
-    // Simulamos una llamada asíncrona a un backend (API).
-    // Usamos un setTimeout para imitar el "loading" de la vida real.
-    await new Promise((r) => setTimeout(r, 800));
-
-    setStatus({ sending: false, sent: true });
-    // Limpiamos el form para que quede listo para otra consulta.
-    setValues({ name: "", email: "", message: "" });
-    setTouched({ name: false, email: false, message: false });
-  }
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
 
   return (
     <Section id="contact">
@@ -89,77 +45,46 @@ export default function Contact() {
             </FadeIn>
           </div>
 
-          <div className="col-lg-7">
-            <FadeIn delay={0.2} direction="left">
-              <div className="h-100 p-4 p-md-5 rounded-4 glass-panel shadow-lg">
-                {status.sent && (
-                  <div className="alert alert-success d-flex align-items-center gap-2" role="alert">
-                    <i className="bi bi-check-circle-fill"></i>
-                    ✅ ¡Mensaje enviado con éxito! Me pondré en contacto pronto.
+          <div className="col-lg-7 d-flex align-items-center">
+            <FadeIn delay={0.2} direction="left" className="w-100">
+              <div className="p-4 p-md-5 rounded-4 glass-panel shadow-lg text-center d-flex flex-column justify-content-center align-items-center h-100">
+                <div className="mb-4">
+                  <div className="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-circle mb-3" style={{ width: '64px', height: '64px' }}>
+                    <i className="bi bi-envelope-paper-heart fs-1"></i>
                   </div>
-                )}
+                  <h3 className="fw-semibold text-white mb-1">{t('contact.emailLabel')}</h3>
+                </div>
 
-                <form onSubmit={handleSubmit} noValidate>
-                  <div className="mb-4">
-                    <label className="form-label text-sm fw-medium text-secondary" htmlFor="name">Nombre</label>
-                    <input
-                      id="name"
-                      name="name"
-                      className={`form-control form-control-lg bg-dark border-secondary text-white focus-primary ${touched.name && errors.name ? "is-invalid" : ""}`}
-                      value={values.name}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      placeholder="Tu nombre"
-                    />
-                    {touched.name && errors.name && (
-                      <div className="invalid-feedback">{errors.name}</div>
-                    )}
-                  </div>
-
-                  <div className="mb-4">
-                    <label className="form-label text-sm fw-medium text-secondary" htmlFor="email">Email</label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      className={`form-control form-control-lg bg-dark border-secondary text-white focus-primary ${touched.email && errors.email ? "is-invalid" : ""}`}
-                      value={values.email}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      placeholder="tucorreo@ejemplo.com"
-                    />
-                    {touched.email && errors.email && (
-                      <div className="invalid-feedback">{errors.email}</div>
-                    )}
-                  </div>
-
-                  <div className="mb-4">
-                    <label className="form-label text-sm fw-medium text-secondary" htmlFor="message">Mensaje</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      className={`form-control form-control-lg bg-dark border-secondary text-white focus-primary ${touched.message && errors.message ? "is-invalid" : ""}`}
-                      value={values.message}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      placeholder="Cuéntanos sobre tu proyecto..."
-                    />
-                    {touched.message && errors.message && (
-                      <div className="invalid-feedback">{errors.message}</div>
-                    )}
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="btn btn-primary btn-lg w-100 fw-bold"
-                    disabled={status.sending}
+                <div className="bg-dark bg-opacity-50 border border-secondary rounded-pill px-4 py-3 mb-3 d-flex align-items-center gap-3 w-100 justify-content-between" style={{ maxWidth: '400px' }}>
+                  <span className="fs-5 fw-bold text-white tracking-wide font-monospace text-truncate">
+                    {email}
+                  </span>
+                  
+                  <button 
+                    onClick={handleCopy}
+                    className={`btn btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center transition-all ${copied ? 'btn-success text-white' : 'btn-outline-secondary hover-white'}`}
+                    style={{ minWidth: '40px', width: '40px', height: '40px' }}
+                    title={t('contact.copyEmail')}
                   >
-                    {status.sending ? (
-                      <span><span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Enviando...</span>
-                    ) : t('contact.sendEmail')}
+                    <i className={`bi ${copied ? 'bi-check2-all fs-5' : 'bi-clipboard fs-5'}`}></i>
                   </button>
-                </form>
+                </div>
+
+                {/* Toasty notification area */}
+                <div className="mb-4 d-flex align-items-center justify-content-center" style={{ minHeight: '30px' }}>
+                  <span className={`badge bg-success bg-opacity-25 text-success px-3 py-2 rounded-pill transition-all ${copied ? 'opacity-100' : 'opacity-0'}`}>
+                    <i className="bi bi-check-circle-fill me-2"></i>
+                    {t('contact.copied')}
+                  </span>
+                </div>
+
+                <a 
+                  href={`mailto:${email}`}
+                  className="btn btn-primary btn-lg rounded-pill px-5 fw-bold hover-scale"
+                >
+                  <i className="bi bi-send-fill me-2"></i>
+                  {t('contact.sendEmail')}
+                </a>
               </div>
             </FadeIn>
           </div>

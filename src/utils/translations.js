@@ -3,7 +3,8 @@ export const translations = {
         nav: {
             projects: "Proyectos",
             contact: "Contacto",
-            contactBtn: "Contactar"
+            contactBtn: "Contactar",
+            downloadCv: "Descargar CV"
         },
         hero: {
             greeting: "Hola, soy Alfredo",
@@ -48,12 +49,6 @@ export const translations = {
             copyEmail: "Copiar Email",
             copied: "¡Copiado!",
             sendEmail: "Enviar Correo",
-            errors: {
-                nameRequired: "El nombre es requerido.",
-                emailRequired: "El email es requerido.",
-                emailInvalid: "Por favor ingresa un email válido.",
-                messageRequired: "El mensaje es requerido."
-            },
             reasons: {
                 jobs: "Discutir oportunidades laborales",
                 collab: "Colaboración en proyectos",
@@ -68,7 +63,8 @@ export const translations = {
         nav: {
             projects: "Projects",
             contact: "Contact",
-            contactBtn: "Get in Touch"
+            contactBtn: "Get in Touch",
+            downloadCv: "Download CV"
         },
         hero: {
             greeting: "Hi, I'm Alfredo",
@@ -113,12 +109,6 @@ export const translations = {
             copyEmail: "Copy Email",
             copied: "Copied!",
             sendEmail: "Send Email",
-            errors: {
-                nameRequired: "Name is required.",
-                emailRequired: "Email is required.",
-                emailInvalid: "Please enter a valid email.",
-                messageRequired: "Message is required."
-            },
             reasons: {
                 jobs: "Discuss job opportunities",
                 collab: "Project collaboration",
