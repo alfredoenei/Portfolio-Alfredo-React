@@ -10,6 +10,7 @@ export const translations = {
             greeting: "Hola, soy Alfredo",
             role: "Desarrollador Full Stack & Arquitecto de Software",
             description: "Especializado en crear soluciones digitales escalables y de alto rendimiento. Transformo ideas complejas en código elegante y funcional.",
+            available: "Disponible para nuevas oportunidades",
             cta: {
                 projects: "Ver Proyectos",
                 contact: "Hablemos"
@@ -55,6 +56,36 @@ export const translations = {
                 consulting: "Consultas sobre desarrollo web"
             }
         },
+        experience: {
+            title: "Experiencia",
+            freelance: {
+                title: "Desarrollador Full Stack",
+                date: "01/2026 - Presente",
+                role: "Freelance",
+                points: [
+                    "Construcción de aplicaciones de comercio electrónico y pasarelas de pago simuladas utilizando <strong>React</strong> y <strong>Vite</strong> enfocándose en una UX/UI responsiva.",
+                    "Desarrollo de plataformas y paneles de gestión dinámica con el stack <strong>MEAN</strong> (MongoDB, Express, Angular, Node.js).",
+                    "Diseño e implementación de <strong>APIs RESTful</strong> sólidas y manejo avanzado de estado global para arquitecturas escalables."
+                ]
+            },
+            personal: {
+                title: "Proyectos Personales Full Stack",
+                date: "Desarrollo Continuo",
+                role: "Arquitectura y Lógica de Negocio",
+                points: [
+                    "<strong>Sistemas Interactivos y Tiempo Real:</strong> Implementación de interfaces complejas (Drag & Drop para tableros Kanban) y comunicación bidireccional mediante WebSockets.",
+                    "<strong>Gestión de Datos y APIs:</strong> Integración de servicios de terceros combinados con bases de datos propias, implementando autenticación segura (JWT), subida de archivos (S3) y control de accesos.",
+                    "<strong>Operaciones Avanzadas:</strong> Desarrollo de procesos en segundo plano (CRON jobs), visualización de métricas en Dashboards interactivos e implementaciones de carritos de e-commerce con manejo riguroso del estado global."
+                ]
+            }
+        },
+        techStack: {
+            title: "Stack Tecnológico"
+        },
+        certifications: {
+            title: "Acreditaciones",
+            viewBtn: "Ver Certificado ↗"
+        },
         footer: {
             rights: "Todos los derechos reservados."
         }
@@ -70,6 +101,7 @@ export const translations = {
             greeting: "Hi, I'm Alfredo",
             role: "Full Stack Developer & Software Architect",
             description: "Specialized in building scalable, high-performance digital solutions. I transform complex ideas into elegant, functional code.",
+            available: "Available for new opportunities",
             cta: {
                 projects: "View Projects",
                 contact: "Let's Talk"
@@ -114,6 +146,36 @@ export const translations = {
                 collab: "Project collaboration",
                 consulting: "Web development consultation"
             }
+        },
+        experience: {
+            title: "Experience",
+            freelance: {
+                title: "Full Stack Developer",
+                date: "01/2026 - Present",
+                role: "Freelance",
+                points: [
+                    "Built e-commerce applications and simulated payment gateways using <strong>React</strong> and <strong>Vite</strong>, focusing on responsive UX/UI.",
+                    "Developed dynamic platforms and management dashboards using the <strong>MEAN</strong> stack (MongoDB, Express, Angular, Node.js).",
+                    "Designed and implemented robust <strong>RESTful APIs</strong> and advanced global state management for scalable architectures."
+                ]
+            },
+            personal: {
+                title: "Full Stack Personal Projects",
+                date: "Continuous Development",
+                role: "Architecture & Business Logic",
+                points: [
+                    "<strong>Interactive & Real-Time Systems:</strong> Implemented complex interfaces (Drag & Drop for Kanban boards) and two-way communication using WebSockets.",
+                    "<strong>Data & API Management:</strong> Integrated third-party services with custom databases, implementing secure authentication (JWT), file uploads (S3), and access control.",
+                    "<strong>Advanced Operations:</strong> Developed background processes (CRON jobs), interactive metric Dashboards, and e-commerce shopping carts with strict global state management."
+                ]
+            }
+        },
+        techStack: {
+            title: "Tech Stack"
+        },
+        certifications: {
+            title: "Certifications",
+            viewBtn: "View Credential ↗"
         },
         footer: {
             rights: "All rights reserved."
