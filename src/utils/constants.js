@@ -17,7 +17,7 @@ export const PROJECTS = [
     description: "Plataforma para exhibición de arte con gestión de contenido dinámico.",
     tags: ["MongoDB", "Angular", "Express", "Node.js"],
     link: "#",
-    github: "https://github.com/alfredoenei",
+    github: "https://github.com/alfredoenei/TFG-BLOG_ARTE",
     image: "/assets/projects/web-de-arte.gif",
     imagePlaceholder: "Web de Arte",
     longDescription: "Una plataforma digital sofisticada diseñada para galerías y artistas. Construida sobre el stack MEAN (MongoDB, Express, Angular, Node.js), ofrece una gestión de contenido dinámica, permitiendo a los administradores curar exposiciones virtuales con facilidad. La interfaz de usuario, rápida y responsiva, asegura que las obras de arte sean las protagonistas, proporcionando una experiencia de visualización inmersiva."

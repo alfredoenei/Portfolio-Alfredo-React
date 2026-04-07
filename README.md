@@ -1,31 +1,60 @@
-# Portafolio de Desarrollo Full Stack | Alfredo Andrés
+*Read this in other languages: [Español](README-es.md)*
 
-¡Hola! Bienvenido a mi portafolio digital.
+# Portfolio — Fullstack Web Developer
 
-Aquí encontrarás una selección de mis trabajos más recientes y una visión clara de mi perfil técnico.
+**Live Demo:** [alfredo-enei-portfolio.netlify.app](https://alfredo-enei-portfolio.netlify.app/)
 
-## Sobre este Proyecto
-
-Construido desde cero utilizando tecnologías modernas, este portafolio refleja mi filosofía de desarrollo: **código limpio, arquitectura escalable y diseño centrado en el usuario**.
-
-### Tech Stack
--   **React + Vite**: Para una experiencia de desarrollo ultrarrápida y un rendimiento en producción optimizado.
--   **Bootstrap 5 (Customizado)**: Utilizando utilidades modernas y un sistema de diseño personalizado (glassmorphism, degradados) para romper con el aspecto "estándar".
--   **CSS Modules / Custom CSS**: Estilos refinados para animaciones suaves y una identidad visual única.
-
-## Proyectos Destacados (Integrados)
-
-Dentro del portafolio podrás explorar demos interactivas y detalles técnicos de:
-
-1.  **Web de Arte (MEAN Stack)**: Una plataforma completa para galerías de arte, gestionando contenido dinámico con MongoDB, Express, Angular y Node.js.
-2.  **Marketplace Simulation**: Un simulador de comercio electrónico con carrito de compras, pasarela de pagos simulada y gestión de estado compleja.
-
-
-## Contacto
-
-¿Te interesa mi perfil o quieres colaborar?
--   [LinkedIn](https://www.linkedin.com/in/alfredo-enei-61b61034b)
--   [GitHub](https://github.com/alfredoenei)
+A professional, interactive portfolio designed as a modern Single Page Application (SPA). This project serves both as a presentation of my work and as a demonstration of my frontend skills, focusing on performance, clean architecture, and user experience.
 
 ---
-Desarrollado por Alfredo Andrés Enei
+
+## Technical Stack
+
+- **Framework:** React 19
+- **Build Tool:** Vite 7
+- **Styling:** Custom CSS with Bootstrap 5 utility classes
+- **Animations:** Framer Motion
+- **State Management:** React Context API (for i18n)
+
+## Key Features
+
+- **Component-Based Architecture:** Modular design prioritizing reusability and clean code, with strict separation between UI components and logical sections.
+- **Performance Optimized:** Implementation of React lazy loading (`React.lazy` y `Suspense`) to ensure fast initial page loads.
+- **Internationalization (i18n):** Built-in support for multiple languages (Spanish/English) with automatic persistence via `localStorage`.
+- **Responsive & Modern Design:** A terminal-inspired aesthetic featuring glassmorphism and subtle micro-animations that enhance UX without compromising performance.
+- **Continuous Deployment:** Automated CI/CD pipeline set up with Netlify.
+
+## Project Structure
+
+```text
+src/
+├── components/     # Reusable UI elements and generic wrappers
+├── context/        # Global state providers (LanguageContext)
+├── sections/       # Main views (Projects, Experience, TechStack, etc.)
+├── styles/         # Global CSS and custom design variables
+└── utils/          # Constants, localization data, and helpers
+```
+
+## Running Locally
+
+To run this project locally, execute the following commands:
+
+```bash
+# Clone the repository
+git clone https://github.com/alfredoenei/React-saas-landing.git
+cd React-saas-landing
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Contact
+
+- **LinkedIn:** [linkedin.com/in/alfredo-enei-61b61034b](https://www.linkedin.com/in/alfredo-enei-61b61034b)
+- **GitHub:** [github.com/alfredoenei](https://github.com/alfredoenei)
