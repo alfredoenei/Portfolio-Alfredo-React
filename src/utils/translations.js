@@ -39,6 +39,11 @@ export const translations = {
                     title: "Simulación de Marketplace",
                     description: "Simulación completa de una plataforma de ventas con carrito y pagos.",
                     longDescription: "Este proyecto es una simulación integral de un entorno de comercio electrónico moderno. Desarrollado con React y Vite para un rendimiento óptimo, integra un sistema de carrito de compras reactivo, gestión de estado global, y una pasarela de pagos simulada. La interfaz, diseñada con Bootstrap, asegura una experiencia de usuario fluida y responsiva, permitiendo filtrar productos, ver detalles en profundidad y completar transacciones simuladas."
+                },
+                kanban: {
+                    title: "Gestor de Tareas Kanban",
+                    description: "Tablero Kanban profesional con Drag & Drop, diseño Glassmorphism y gestión completa de tareas.",
+                    longDescription: "Aplicación MERN Full-Stack de gestión de tareas con tablero Kanban interactivo. Migré el sistema de Drag & Drop a dnd-kit para lograr una fluidez de 60fps con detección de colisiones por centro. La interfaz implementa un diseño Glassmorphism con prioridades visuales (brillos reactivos por nivel), etiquetas inteligentes y acciones masivas por columna. Backend con autenticación JWT y persistencia completa en MongoDB Atlas."
                 }
             }
         },
@@ -130,6 +135,11 @@ export const translations = {
                     title: "Marketplace Simulation",
                     description: "Complete simulation of a sales platform with shopping cart and payments.",
                     longDescription: "This project is a comprehensive simulation of a modern e-commerce environment. Developed with React and Vite for optimal performance, it integrates a reactive shopping cart system, global state management, and a simulated payment gateway. The interface, designed with Bootstrap, ensures a smooth and responsive user experience, allowing users to filter products, view details in depth, and complete simulated transactions."
+                },
+                kanban: {
+                    title: "Kanban Task Manager",
+                    description: "Professional Kanban board with Drag & Drop, Glassmorphism design, and complete task management.",
+                    longDescription: "A MERN Full-Stack task management application with an interactive Kanban board. I migrated the Drag & Drop system to dnd-kit to achieve 60fps fluidity with center-based collision detection. The interface implements a Glassmorphism design with visual priorities (reactive glows by level), smart tags, and batch column actions. Backend with JWT authentication and full persistence on MongoDB Atlas."
                 }
             }
         },

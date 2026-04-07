@@ -87,11 +87,21 @@ export default function ProjectDetails({ project, onBack }) {
                                 </div>
 
                                 <div className="d-grid gap-2">
+                                    {project.live && (
+                                        <a
+                                            href={project.live}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="btn btn-primary d-flex align-items-center justify-content-center gap-2"
+                                        >
+                                            <i className="bi bi-rocket-takeoff"></i> Live Demo
+                                        </a>
+                                    )}
                                     <a
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="btn btn-primary d-flex align-items-center justify-content-center gap-2"
+                                        className={`btn ${project.live ? 'btn-outline-light' : 'btn-primary'} d-flex align-items-center justify-content-center gap-2`}
                                     >
                                         <i className="bi bi-github"></i> {t('projects.viewCode')}
                                     </a>

@@ -32,6 +32,17 @@ export const PROJECTS = [
     imagePlaceholder: "Marketplace",
     longDescription: "Este proyecto es una simulación integral de un entorno de comercio electrónico moderno. Desarrollado con React y Vite para un rendimiento óptimo, integra un sistema de carrito de compras reactivo, gestión de estado global, y una pasarela de pagos simulada. La interfaz, diseñada con Bootstrap, asegura una experiencia de usuario fluida y responsiva, permitiendo filtrar productos, ver detalles en profundidad y completar transacciones simuladas."
   },
+  {
+    title: "Gestor de Tareas Kanban",
+    key: "kanban",
+    description: "Tablero Kanban profesional con Drag & Drop, diseño Glassmorphism y gestión completa de tareas.",
+    tags: ["React", "Node.js", "Express", "MongoDB", "dnd-kit", "Framer Motion"],
+    github: "https://github.com/alfredoenei/Gestor-De-Tareas",
+    live: "https://gestor-de-tareas-alfredo.netlify.app",
+    image: "/assets/projects/gestor-tareas.png",
+    imagePlaceholder: "Kanban Pro",
+    longDescription: "Aplicación MERN Full-Stack de gestión de tareas con tablero Kanban interactivo. Migré el sistema de Drag & Drop a dnd-kit para lograr una fluidez de 60fps con detección de colisiones por centro. La interfaz implementa un diseño Glassmorphism con prioridades visuales (brillos reactivos por nivel), etiquetas inteligentes y acciones masivas por columna. Backend con autenticación JWT y persistencia completa en MongoDB Atlas."
+  },
 ];
 
 export const CONTACT_REASONS = [

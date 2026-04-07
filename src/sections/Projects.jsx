@@ -34,6 +34,11 @@ export default function Projects({ onViewProject }) {
                                         <a href={project.github} target="_blank" rel="noreferrer" className="text-secondary hover-white">
                                             <i className="bi bi-github fs-5"></i>
                                         </a>
+                                        {project.live && (
+                                            <a href={project.live} target="_blank" rel="noreferrer" className="text-secondary hover-white" title="Live Demo">
+                                                <i className="bi bi-rocket-takeoff fs-5"></i>
+                                            </a>
+                                        )}
                                         <button onClick={() => onViewProject(project)} className="btn btn-link text-secondary hover-white p-0 m-0 border-0">
                                             <i className="bi bi-box-arrow-up-right fs-5"></i>
                                         </button>
