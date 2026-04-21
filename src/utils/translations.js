@@ -30,20 +30,20 @@ export const translations = {
             tags: "Tecnologías:",
             links: "Enlaces:",
             list: {
+                streammatch: {
+                    title: "StreamMatch AI",
+                    description: "Análisis de intención semántica y curaduría narrativa para streaming.",
+                    longDescription: "Plataforma de próxima generación con análisis de intención semántica. Integra OpenAI para curaduría narrativa y una arquitectura resiliente con Circuit Breakers para manejar APIs externas. Diseño premium con Dynamic UI."
+                },
+                careerops: {
+                    title: "CareerOps",
+                    description: "CRM Kanban y Extensión Chrome para gestión estratégica de búsqueda de empleo.",
+                    longDescription: "Sistema CRM avanzado con tablero Kanban interactivo y extensión de Chrome (Manifest V3) para scraping híbrido de ofertas. Implementa seguridad con JWT y persistencia en MongoDB Atlas."
+                },
                 artWeb: {
                     title: "Web de Arte",
                     description: "Plataforma para exhibición de arte con gestión de contenido dinámico.",
                     longDescription: "Una plataforma digital sofisticada diseñada para galerías y artistas. Construida sobre el stack MEAN (MongoDB, Express, Angular, Node.js), ofrece una gestión de contenido dinámica, permitiendo a los administradores curar exposiciones virtuales con facilidad. La interfaz de usuario, rápida y responsiva, asegura que las obras de arte sean las protagonistas, proporcionando una experiencia de visualización inmersiva."
-                },
-                marketplace: {
-                    title: "Simulación de Marketplace",
-                    description: "Simulación completa de una plataforma de ventas con carrito y pagos.",
-                    longDescription: "Este proyecto es una simulación integral de un entorno de comercio electrónico moderno. Desarrollado con React y Vite para un rendimiento óptimo, integra un sistema de carrito de compras reactivo, gestión de estado global, y una pasarela de pagos simulada. La interfaz, diseñada con Bootstrap, asegura una experiencia de usuario fluida y responsiva, permitiendo filtrar productos, ver detalles en profundidad y completar transacciones simuladas."
-                },
-                kanban: {
-                    title: "Gestor de Tareas Kanban",
-                    description: "Tablero Kanban profesional con Drag & Drop, diseño Glassmorphism y gestión completa de tareas.",
-                    longDescription: "Aplicación MERN Full-Stack de gestión de tareas con tablero Kanban interactivo. Migré el sistema de Drag & Drop a dnd-kit para lograr una fluidez de 60fps con detección de colisiones por centro. La interfaz implementa un diseño Glassmorphism con prioridades visuales (brillos reactivos por nivel), etiquetas inteligentes y acciones masivas por columna. Backend con autenticación JWT y persistencia completa en MongoDB Atlas."
                 }
             }
         },
@@ -126,20 +126,20 @@ export const translations = {
             tags: "Technologies:",
             links: "Links:",
             list: {
+                streammatch: {
+                    title: "StreamMatch AI",
+                    description: "Semantic intent analysis and narrative curation for streaming.",
+                    longDescription: "Next-generation platform with semantic intent analysis. Integrates OpenAI for narrative curation and a resilient architecture with Circuit Breakers to handle external APIs. Premium Dynamic UI design."
+                },
+                careerops: {
+                    title: "CareerOps",
+                    description: "CRM Kanban and Chrome Extension for strategic job search management.",
+                    longDescription: "Advanced CRM system with interactive Kanban board and Chrome Extension (Manifest V3) for hybrid lead scraping. Implements JWT security and MongoDB Atlas persistence."
+                },
                 artWeb: {
                     title: "Art Gallery Web",
                     description: "Art exhibition platform with dynamic content management.",
                     longDescription: "A sophisticated digital platform designed for galleries and artists. Built on the MEAN stack (MongoDB, Express, Angular, Node.js), it offers dynamic content management, allowing administrators to curate virtual exhibitions with ease. The fast and responsive user interface ensures that the artwork takes center stage, providing an immersive viewing experience."
-                },
-                marketplace: {
-                    title: "Marketplace Simulation",
-                    description: "Complete simulation of a sales platform with shopping cart and payments.",
-                    longDescription: "This project is a comprehensive simulation of a modern e-commerce environment. Developed with React and Vite for optimal performance, it integrates a reactive shopping cart system, global state management, and a simulated payment gateway. The interface, designed with Bootstrap, ensures a smooth and responsive user experience, allowing users to filter products, view details in depth, and complete simulated transactions."
-                },
-                kanban: {
-                    title: "Kanban Task Manager",
-                    description: "Professional Kanban board with Drag & Drop, Glassmorphism design, and complete task management.",
-                    longDescription: "A MERN Full-Stack task management application with an interactive Kanban board. I migrated the Drag & Drop system to dnd-kit to achieve 60fps fluidity with center-based collision detection. The interface implements a Glassmorphism design with visual priorities (reactive glows by level), smart tags, and batch column actions. Backend with JWT authentication and full persistence on MongoDB Atlas."
                 }
             }
         },

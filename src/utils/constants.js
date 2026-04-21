@@ -12,6 +12,26 @@ export const HERO_STEPS = [
 
 export const PROJECTS = [
   {
+    title: "StreamMatch AI",
+    key: "streammatch",
+    description: "Curador de streaming inteligente con IA que elimina la parálisis de elección.",
+    tags: ["React 19", "Node.js", "OpenAI API", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/alfredoenei/Streammatch-AI",
+    image: "/assets/projects/streammatch-mockup.webp",
+    imagePlaceholder: "StreamMatch AI",
+    longDescription: "Plataforma de próxima generación con análisis de intención semántica. Integra OpenAI para curaduría narrativa y una arquitectura resiliente con Circuit Breakers para manejar APIs externas. Diseño premium con Dynamic UI."
+  },
+  {
+    title: "CareerOps",
+    key: "careerops",
+    description: "CRM Kanban y Extensión Chrome para gestión estratégica de búsqueda de empleo.",
+    tags: ["React", "Node.js", "MongoDB", "Chrome API", "JWT"],
+    github: "https://github.com/alfredoenei/CarreerOps",
+    image: "/assets/projects/gestor-tareas.png",
+    imagePlaceholder: "CareerOps",
+    longDescription: "Sistema CRM avanzado con tablero Kanban interactivo y extensión de Chrome (Manifest V3) para scraping híbrido de ofertas. Implementa seguridad con JWT y persistencia en MongoDB Atlas."
+  },
+  {
     title: "Web de Arte",
     key: "artWeb",
     description: "Plataforma para exhibición de arte con gestión de contenido dinámico.",
@@ -22,27 +42,6 @@ export const PROJECTS = [
     image: "/assets/projects/web-de-arte.gif",
     imagePlaceholder: "Web de Arte",
     longDescription: "Una plataforma digital sofisticada diseñada para galerías y artistas. Construida sobre el stack MEAN (MongoDB, Express, Angular, Node.js), ofrece una gestión de contenido dinámica, permitiendo a los administradores curar exposiciones virtuales con facilidad. La interfaz de usuario, rápida y responsiva, asegura que las obras de arte sean las protagonistas, proporcionando una experiencia de visualización inmersiva."
-  },
-  {
-    title: "Marketplace Simulation",
-    key: "marketplace",
-    description: "Simulación completa de una plataforma de ventas con carrito y pagos.",
-    tags: ["React", "Bootstrap", "Vite"],
-    github: "https://github.com/alfredoenei/E-commerce-Fullstack",
-    image: "/assets/projects/marketplace.gif",
-    imagePlaceholder: "Marketplace",
-    longDescription: "Este proyecto es una simulación integral de un entorno de comercio electrónico moderno. Desarrollado con React y Vite para un rendimiento óptimo, integra un sistema de carrito de compras reactivo, gestión de estado global, y una pasarela de pagos simulada. La interfaz, diseñada con Bootstrap, asegura una experiencia de usuario fluida y responsiva, permitiendo filtrar productos, ver detalles en profundidad y completar transacciones simuladas."
-  },
-  {
-    title: "Gestor de Tareas Kanban",
-    key: "kanban",
-    description: "Tablero Kanban profesional con Drag & Drop, diseño Glassmorphism y gestión completa de tareas.",
-    tags: ["React", "Node.js", "Express", "MongoDB", "dnd-kit", "Framer Motion"],
-    github: "https://github.com/alfredoenei/Gestor-De-Tareas",
-    live: "https://gestor-de-tareas-alfredo.netlify.app",
-    image: "/assets/projects/gestor-tareas.png",
-    imagePlaceholder: "Kanban Pro",
-    longDescription: "Aplicación MERN Full-Stack de gestión de tareas con tablero Kanban interactivo. Migré el sistema de Drag & Drop a dnd-kit para lograr una fluidez de 60fps con detección de colisiones por centro. La interfaz implementa un diseño Glassmorphism con prioridades visuales (brillos reactivos por nivel), etiquetas inteligentes y acciones masivas por columna. Backend con autenticación JWT y persistencia completa en MongoDB Atlas."
   },
 ];
 

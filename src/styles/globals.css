@@ -258,3 +258,17 @@ a {
   background-color: rgba(255, 255, 255, 0.05);
   border-color: var(--text-primary);
 }
+/* Elite Card Style */
+.elite-card {
+  background: rgba(25, 25, 25, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.elite-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -10px rgba(0, 184, 217, 0.15);
+  border-color: rgba(0, 184, 217, 0.3);
+}

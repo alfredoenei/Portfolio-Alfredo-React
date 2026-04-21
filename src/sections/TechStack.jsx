@@ -12,10 +12,10 @@ export default function TechStack() {
   ];
 
   return (
-    <Section id="tech-stack" className="p-0 mb-4">
+    <Section id="tech-stack" className="p-0">
       <FadeIn>
-        <div className="glass-panel rounded-4 p-4 p-md-5">
-          <h3 className="text-secondary small tracking-wider mb-4 fw-bold text-uppercase font-mono">
+        <div className="elite-card p-4 p-md-5 h-100">
+          <h3 className="text-secondary small tracking-wider mb-5 fw-bold text-uppercase font-mono">
             {t('techStack.title')}
           </h3>
           
@@ -23,8 +23,8 @@ export default function TechStack() {
             {techs.map((tech) => (
               <span 
                 key={tech} 
-                className="badge bg-transparent border border-secondary text-secondary rounded-1 px-3 py-2 font-mono hover-bg-surface-light transition-all"
-                style={{ fontSize: '0.8rem' }}
+                className="badge rounded-pill border border-secondary border-opacity-50 text-secondary fw-normal px-3 py-2 font-mono"
+                style={{ fontSize: '0.75rem' }}
               >
                 {tech}
               </span>
