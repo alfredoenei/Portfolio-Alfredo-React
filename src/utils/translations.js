@@ -32,8 +32,8 @@ export const translations = {
             list: {
                 streammatch: {
                     title: "StreamMatch AI",
-                    description: "Análisis de intención semántica y curaduría narrativa para streaming.",
-                    longDescription: "Plataforma de próxima generación con análisis de intención semántica. Integra OpenAI para curaduría narrativa y una arquitectura resiliente con Circuit Breakers para manejar APIs externas. Diseño premium con Dynamic UI."
+                    description: "Tu sommelier personal de cine: Curaduría inteligente con IA que analiza tus preferencias para ofrecerte la recomendación perfecta en segundos.",
+                    longDescription: "Ecosistema de próxima generación con análisis de intención semántica. Implementa el Radar Conversacional (OpenAI) y una arquitectura de alta disponibilidad con Circuit Breakers para una estabilidad absoluta en la integración de APIs de streaming."
                 },
                 careerops: {
                     title: "CareerOps",
@@ -128,8 +128,8 @@ export const translations = {
             list: {
                 streammatch: {
                     title: "StreamMatch AI",
-                    description: "Semantic intent analysis and narrative curation for streaming.",
-                    longDescription: "Next-generation platform with semantic intent analysis. Integrates OpenAI for narrative curation and a resilient architecture with Circuit Breakers to handle external APIs. Premium Dynamic UI design."
+                    description: "Your personal cinema sommelier: Intelligent AI curation that analyzes your preferences to deliver the perfect recommendation in seconds.",
+                    longDescription: "Next-generation ecosystem with semantic intent analysis. Features the Conversational Radar (OpenAI) and a high-availability architecture with Circuit Breakers for absolute stability when integrating global streaming APIs."
                 },
                 careerops: {
                     title: "CareerOps",
