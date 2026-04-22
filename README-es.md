@@ -3,6 +3,7 @@
 # Portfolio — Fullstack Web Developer
 
 **Demo en vivo:** [alfredo-enei-portfolio.netlify.app](https://alfredo-enei-portfolio.netlify.app/)
+**🍷 Proyecto Destacado (StreamMatch AI):** [streammatch-ai.netlify.app](https://streammatch-ai.netlify.app/)
 
 Un portfolio profesional e interactivo diseñado como una Single Page Application (SPA) moderna. Este proyecto sirve tanto como presentación de mi trabajo como demostración de mis habilidades en frontend, con enfoque en rendimiento, arquitectura limpia y experiencia de usuario.
 

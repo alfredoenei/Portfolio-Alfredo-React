@@ -17,6 +17,7 @@ export const PROJECTS = [
     description: "Curador de streaming inteligente con IA que elimina la parálisis de elección.",
     tags: ["React 19", "Node.js", "OpenAI API", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/alfredoenei/Streammatch-AI",
+    live: "https://streammatch-ai.netlify.app",
     image: "/assets/projects/streammatch-mockup.webp",
     imagePlaceholder: "StreamMatch AI",
     longDescription: "Plataforma de próxima generación con análisis de intención semántica. Integra OpenAI para curaduría narrativa y una arquitectura resiliente con Circuit Breakers para manejar APIs externas. Diseño premium con Dynamic UI."
