@@ -12,6 +12,17 @@ export const HERO_STEPS = [
 
 export const PROJECTS = [
   {
+    title: "Equilive",
+    key: "equilive",
+    description: "Ecosistema de armonía doméstica con motor de equidad inteligente.",
+    tags: ["React 19", "Node.js", "Prisma", "PostgreSQL", "Socket.io"],
+    github: "https://github.com/alfredoenei/Equilive",
+    live: "https://equilive.netlify.app",
+    image: "/assets/projects/equilive-mockup.webp",
+    imagePlaceholder: "Equilive",
+    longDescription: "Plataforma premium diseñada para eliminar la fricción en la convivencia. Implementa un Fairness Engine para asignación de tareas y un motor financiero de liquidación de deudas eficiente. Interfaz ultra-premium con Glassmorphism y sincronización en tiempo real."
+  },
+  {
     title: "StreamMatch AI",
     key: "streammatch",
     description: "Curador de streaming inteligente con IA que elimina la parálisis de elección.",

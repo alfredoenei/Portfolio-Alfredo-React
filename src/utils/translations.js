@@ -44,6 +44,11 @@ export const translations = {
                     title: "Web de Arte",
                     description: "Plataforma para exhibición de arte con gestión de contenido dinámico.",
                     longDescription: "Una plataforma digital sofisticada diseñada para galerías y artistas. Construida sobre el stack MEAN (MongoDB, Express, Angular, Node.js), ofrece una gestión de contenido dinámica, permitiendo a los administradores curar exposiciones virtuales con facilidad. La interfaz de usuario, rápida y responsiva, asegura que las obras de arte sean las protagonistas, proporcionando una experiencia de visualización inmersiva."
+                },
+                equilive: {
+                    title: "Equilive",
+                    description: "Ecosistema de armonía doméstica con motor de equidad inteligente para la gestión de tareas y finanzas compartidas.",
+                    longDescription: "Plataforma premium diseñada para eliminar la fricción en la convivencia. Implementa un Fairness Engine (Heurística de Karma y Carga) para asignación de tareas y un motor financiero de liquidación de deudas eficiente. Interfaz ultra-premium con Glassmorphism y sincronización en tiempo real vía WebSockets."
                 }
             }
         },
@@ -140,6 +145,11 @@ export const translations = {
                     title: "Art Gallery Web",
                     description: "Art exhibition platform with dynamic content management.",
                     longDescription: "A sophisticated digital platform designed for galleries and artists. Built on the MEAN stack (MongoDB, Express, Angular, Node.js), it offers dynamic content management, allowing administrators to curate virtual exhibitions with ease. The fast and responsive user interface ensures that the artwork takes center stage, providing an immersive viewing experience."
+                },
+                equilive: {
+                    title: "Equilive",
+                    description: "Domestic harmony ecosystem with an intelligent fairness engine for shared task and financial management.",
+                    longDescription: "Premium platform designed to eliminate friction in shared living. Implements a Fairness Engine (Karma & Workload heuristics) for task assignment and an efficient financial debt settlement engine. Ultra-premium interface with Glassmorphism and real-time synchronization via WebSockets."
                 }
             }
         },
